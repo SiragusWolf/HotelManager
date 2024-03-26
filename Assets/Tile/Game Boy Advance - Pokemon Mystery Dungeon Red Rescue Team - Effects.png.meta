@@ -1,0 +1,585 @@
+fileFormatVersion: 2
+guid: 2595cff11b8d39b479a1512436685fe3
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 164
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e976857c6f62da4491db61a97e42711
+      internalID: 476321659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_1
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 164
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fbd9d272678dbd4d91adecc36d84704
+      internalID: 2049627250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_2
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 164
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bfe343dac4b27747a1ef84b3b0c4f18
+      internalID: 1573000290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_3
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 164
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1549db96338b264ea6dce7ab82207c4
+      internalID: 1354831751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_4
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 164
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80a84bca3043531498e17fcfba711bc2
+      internalID: -540670843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_5
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 181
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84f30e960e26c5343a551dd5d3e37a17
+      internalID: 175963442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_6
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 181
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc239a3dc30fdee41a25c1bebe89d4ab
+      internalID: 1739600917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_7
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 181
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aded8021e42ac2349a1253256ce0ea2c
+      internalID: 1534704135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_8
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 181
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1093a2504a40e2f4aad50ea0d8e0da1e
+      internalID: -1425376450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_9
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 181
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9525feb0ddbbefa48a5080be628931b9
+      internalID: -1882089418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_10
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 181
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bc56ea9df009c84f893dd7666886300
+      internalID: 1860488676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_11
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 181
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab4197b3b2cb864449a057da9002bcf1
+      internalID: -1233409836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_12
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 181
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94c196ee7e51c9d45ae45a88f68345ad
+      internalID: 2035312172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_13
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 181
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c81734fef4b241743aa017713a1f16db
+      internalID: -766941273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_14
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 181
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09a6a5672c3c4d8439660f250e1be77a
+      internalID: -601332283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_15
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 182
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18d0b34fabd4e4141ae498109c2517da
+      internalID: 584887211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_16
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 182
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ea47e0ba83e0134c99990bc101b01f4
+      internalID: -1902575021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_17
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 116
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a0675c3df35b0a44bdb20bba263a9d7
+      internalID: 917748227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_18
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 137
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75ba26fa27838524d87fcbba795908da
+      internalID: -2002438465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_19
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 137
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50a28d8b710039f4ba8e90ed000a57d7
+      internalID: -1274430095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_20
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 137
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1fcf2fee88f94745a979aaf6d5d3ddb
+      internalID: 327123450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_0: 476321659
+      Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_1: 2049627250
+      Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_10: 1860488676
+      Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_11: -1233409836
+      Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_12: 2035312172
+      Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_13: -766941273
+      Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_14: -601332283
+      Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_15: 584887211
+      Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_16: -1902575021
+      Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_17: 917748227
+      Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_18: -2002438465
+      Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_19: -1274430095
+      Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_2: 1573000290
+      Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_20: 327123450
+      Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_3: 1354831751
+      Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_4: -540670843
+      Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_5: 175963442
+      Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_6: 1739600917
+      Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_7: 1534704135
+      Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_8: -1425376450
+      Game Boy Advance - Pokemon Mystery Dungeon Red Rescue Team - Effects_9: -1882089418
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

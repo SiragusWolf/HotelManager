@@ -1,0 +1,563 @@
+fileFormatVersion: 2
+guid: b48f9d57ab5f0544a8f7551de47e7d5f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DS DSi - Club Penguin Elite Penguin Force - White Puffle_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 248
+        width: 45
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 984a432dd53f02e4d9c13a9eeef9329d
+      internalID: 210938879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Club Penguin Elite Penguin Force - White Puffle_1
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 181
+        width: 53
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6458e1880e122ce4482c6ecca6882a69
+      internalID: 205637504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Club Penguin Elite Penguin Force - White Puffle_2
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 181
+        width: 53
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d58312099c7338458a6667be4fdb3bd
+      internalID: 756260230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Club Penguin Elite Penguin Force - White Puffle_3
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 181
+        width: 53
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a274b79402e4e8e4e8cbf801a964ddc5
+      internalID: 1398457374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Club Penguin Elite Penguin Force - White Puffle_4
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 181
+        width: 53
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d17beac7b33a34d42aebc76e8fd3ac0d
+      internalID: -1422455328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Club Penguin Elite Penguin Force - White Puffle_5
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 181
+        width: 53
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a00241e5bd2ce64c94e117cf685c667
+      internalID: -93394258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Club Penguin Elite Penguin Force - White Puffle_6
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 138
+        width: 47
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b8731f32a560a041b1901c37b77390b
+      internalID: 379414800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Club Penguin Elite Penguin Force - White Puffle_7
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 138
+        width: 47
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfc32eb84f166194686e125ea01c7ef6
+      internalID: -343547639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Club Penguin Elite Penguin Force - White Puffle_8
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 138
+        width: 47
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b3bcf906d5c3544b9d79115199a793d
+      internalID: 425283791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Club Penguin Elite Penguin Force - White Puffle_9
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 71
+        width: 58
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09c222bef09b0dc499ffbcb9d90cd522
+      internalID: -1987968033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Club Penguin Elite Penguin Force - White Puffle_10
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 71
+        width: 58
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ac09d2a47c1c0e418bc3f3ea29b73df
+      internalID: -1660254924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Club Penguin Elite Penguin Force - White Puffle_11
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 71
+        width: 58
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b6fd7544db00604cad3a9af1a08fa14
+      internalID: 1907399816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Club Penguin Elite Penguin Force - White Puffle_12
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 71
+        width: 58
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 293ce6c965e158d48acf491c934f2577
+      internalID: -761407891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Club Penguin Elite Penguin Force - White Puffle_13
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 71
+        width: 58
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9162b201aa44e1e40a97b2ffd6f98a38
+      internalID: 1118425930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Club Penguin Elite Penguin Force - White Puffle_14
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 71
+        width: 58
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04ddae38d18b13f4cbb9d1bdb43aa11d
+      internalID: -392273398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Club Penguin Elite Penguin Force - White Puffle_15
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 4
+        width: 62
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7e9e47971e755640a0c1bf3713bd1c6
+      internalID: -714746258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Club Penguin Elite Penguin Force - White Puffle_16
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 4
+        width: 62
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d1e2ab49a19d414d81b9c6dffc7806e
+      internalID: 556594050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Club Penguin Elite Penguin Force - White Puffle_17
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 4
+        width: 62
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29e9ea02ec87b504a9297c6a2120d29c
+      internalID: 1498179940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Club Penguin Elite Penguin Force - White Puffle_18
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 4
+        width: 62
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68fa18b79f8f22e41a165bebb709b63d
+      internalID: -756516711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Club Penguin Elite Penguin Force - White Puffle_19
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 4
+        width: 62
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1074902aa2b8c64b815c0e847759f19
+      internalID: -205178654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      DS DSi - Club Penguin Elite Penguin Force - White Puffle_0: 210938879
+      DS DSi - Club Penguin Elite Penguin Force - White Puffle_1: 205637504
+      DS DSi - Club Penguin Elite Penguin Force - White Puffle_10: -1660254924
+      DS DSi - Club Penguin Elite Penguin Force - White Puffle_11: 1907399816
+      DS DSi - Club Penguin Elite Penguin Force - White Puffle_12: -761407891
+      DS DSi - Club Penguin Elite Penguin Force - White Puffle_13: 1118425930
+      DS DSi - Club Penguin Elite Penguin Force - White Puffle_14: -392273398
+      DS DSi - Club Penguin Elite Penguin Force - White Puffle_15: -714746258
+      DS DSi - Club Penguin Elite Penguin Force - White Puffle_16: 556594050
+      DS DSi - Club Penguin Elite Penguin Force - White Puffle_17: 1498179940
+      DS DSi - Club Penguin Elite Penguin Force - White Puffle_18: -756516711
+      DS DSi - Club Penguin Elite Penguin Force - White Puffle_19: -205178654
+      DS DSi - Club Penguin Elite Penguin Force - White Puffle_2: 756260230
+      DS DSi - Club Penguin Elite Penguin Force - White Puffle_3: 1398457374
+      DS DSi - Club Penguin Elite Penguin Force - White Puffle_4: -1422455328
+      DS DSi - Club Penguin Elite Penguin Force - White Puffle_5: -93394258
+      DS DSi - Club Penguin Elite Penguin Force - White Puffle_6: 379414800
+      DS DSi - Club Penguin Elite Penguin Force - White Puffle_7: -343547639
+      DS DSi - Club Penguin Elite Penguin Force - White Puffle_8: 425283791
+      DS DSi - Club Penguin Elite Penguin Force - White Puffle_9: -1987968033
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

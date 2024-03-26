@@ -1,0 +1,1715 @@
+fileFormatVersion: 2
+guid: 26ee61bb6aa90e94da0061aa3a584e68
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 335
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c7d7235b3b0f644db98175ba85d8aa3
+      internalID: 1953792727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_1
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 335
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37d8875d087d5c547ab3b3120059cf65
+      internalID: -1162087588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_2
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 303
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c85b7e4b5e16b34282c12ba00250406
+      internalID: 308889837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_3
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 303
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62df8e87844760d4bb2f8a1ab7052028
+      internalID: 323719210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_4
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 303
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eede7f47f1dc7d14483bcf971d709d93
+      internalID: 942610924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_5
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 303
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98edf1db459c6b84185487e5a95606a0
+      internalID: 1075218470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_6
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 303
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 223add54abd0e154f973118ce47dd3d5
+      internalID: -1447625507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_7
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 303
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 421a3ce84b38c7f4880a6752d1468683
+      internalID: -1781718955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_8
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 271
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa1e1cb30f2800d4c90880ab380f512d
+      internalID: -919370819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_9
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 271
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d74f3d1ed3dd6e4babc1f27855e58e0
+      internalID: -523914998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_10
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 271
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df6c39f0e23f15c4ea39d2edb6cfe014
+      internalID: -474118390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_11
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 271
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62a8a3471c9b70f43a9b8eb28f58550e
+      internalID: -906340680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_12
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 271
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e950600366a5f44419a6ffb105feb63c
+      internalID: -1937011091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_13
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 271
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f09a33393ade1bf49abc4ddce3fd096c
+      internalID: -986291829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_14
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 219
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07f50bf4bff01424389117c62ad8af0a
+      internalID: 1369350142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_15
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 219
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 361cbf9e738036b42b1f4093b667a941
+      internalID: -598825167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_16
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 219
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd4c59d303e6c1b4aa6878afbaf058d0
+      internalID: 704044197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_17
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 219
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c03e00ad79894942a5a308d0f4ab475
+      internalID: -2070086298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_18
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 219
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57838157bc549f34db485bd3042e0d88
+      internalID: -479363261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_19
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 219
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c29fbba4b3497b4bb4c23d907200377
+      internalID: 585763592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_20
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 187
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff8f50b4ee1efce47b313f4ad267e4d9
+      internalID: 1350955867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_21
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 187
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25d2adb4b69aaa7419a92e432d0bf1a6
+      internalID: 1008987518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_22
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 187
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 792174e58a95dfd409240cfe838a487d
+      internalID: 277443059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_23
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 187
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86dbacd5084aea640910c7f7dc765543
+      internalID: -1551150699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_24
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 187
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b536c0b05f4983147b34cdcf5410a026
+      internalID: 96049556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_25
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 187
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25ee4537f8975194d9a6434779cf46e0
+      internalID: -617127461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_26
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 187
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 172557d39a0a2364b898e80b9c3d1196
+      internalID: -282235510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_27
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 187
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25b15faa51d55914b9d3d4ce1b43816e
+      internalID: -129475655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_28
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 187
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4e4efe4dc7b44047ad15b7a759fe262
+      internalID: -202519862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_29
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 187
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50a9d0f5998026041b9c816f11a40ff6
+      internalID: -620627548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_30
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 187
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab7d68946481ee945898a7147f46ba3f
+      internalID: 103337434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_31
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 187
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8e2c57b5ec3c1a4988a17e5808fa28f
+      internalID: 1894486233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_32
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 187
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 005415fbe9b5fe846b88045eef81b8ef
+      internalID: -1711781106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_33
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 187
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e37ac06f5c7ff5c4d94265c2b2f67a73
+      internalID: -980506119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_34
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 187
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8e3f31722d1f40488d51ddbfb2d05c6
+      internalID: -1025364317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_35
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 187
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f07380cffe31e904181b175c82813d63
+      internalID: -1231502159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_36
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 187
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 087e16521453906478ecbcd06e6036a9
+      internalID: -1054031708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_37
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 187
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93873c077135dd449a9f0a5fea7cd53b
+      internalID: -1056077783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_38
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 155
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46b0644425ade5642add5f8fac9b663b
+      internalID: 814164214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_39
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 155
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afecfb94296702f46a872ecb1214df7f
+      internalID: 1177183343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_40
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 155
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdc2530fbff0d6548866aaffe37876de
+      internalID: -398897710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_41
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 155
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d034fff2c339504690b86bfeb0f2ca5
+      internalID: 503955973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_42
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 155
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77deaead9117ed74d973ba6a4650efc7
+      internalID: -2012994193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_43
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 155
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8923bccac8aa384780c80e4e2e4605c
+      internalID: -1217254176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_44
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 155
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c66548b8e02a0944972c6f33c0f791f
+      internalID: -871876773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_45
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 155
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c8a329ef5f0de44abb1922b72ef33ac
+      internalID: 1940873178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_46
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 155
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4241a8a9f252fa46b952414dd647076
+      internalID: -406966167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_47
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 155
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cad0537862d4e0d448cd7b0f5d45a128
+      internalID: 1986541963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_48
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 155
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 544ea497055132a40a3b5b2cb38b4c6f
+      internalID: 2104550050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_49
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 155
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e55b9bc07d97694987621575cacf6ac
+      internalID: -668550453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_50
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 155
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebd6032b564efa646acbb1ffc82fd6ac
+      internalID: 1746733761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_51
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 155
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e288e3c421d28ab468e7e8f0317a1361
+      internalID: 904820569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_52
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 155
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e65c2c7201f81545b44883b4e26cea3
+      internalID: -308786432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_53
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 155
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a55083742599054459ff7eb77a9a7954
+      internalID: 1752001910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_54
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 155
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00ede375849cfd846a040e7503c22c97
+      internalID: 845017990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_55
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 155
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 629d0479b02a8714aa17080368900f22
+      internalID: 1656006921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_56
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 121
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c02762e7bf42464faecf25408001ebc
+      internalID: 948858419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_57
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 121
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c14bae6a9bb12e349bbdc039c8a695ed
+      internalID: 272781892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_58
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 121
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d500ee755311c7041a588a1d66b218b2
+      internalID: -1593304065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_59
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 121
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d27412a7477df964ea88773e3b26616c
+      internalID: 1075859832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_60
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 121
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfe5901cedd015d4787e0322a92c5d18
+      internalID: -1387712877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_61
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 121
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04aab26d3c4703641b47d0ed5768ce56
+      internalID: -1528581397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_62
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 121
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 497ad7a518d18914bbe62a8fd58de253
+      internalID: 234007407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_63
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 121
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 773e6f7bc2c73314f8f1c703456fc958
+      internalID: 2100774832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_64
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 121
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a84493bfc0bcc54b991f4c03dec5f50
+      internalID: -429628870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_65
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 70
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7e2fc615364135488b799df4d53f73a
+      internalID: 734577968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_66
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 36
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07b1db16c2ae4db458c260a64e5a31ed
+      internalID: 599268401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_67
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 36
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 807ff7cde6ddb8e45889f2a1c9aa4bc2
+      internalID: 1831983955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_68
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 36
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 120470e86d41c8a409f1e26c75fbfe10
+      internalID: -298132172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_69
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 4
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca1e4f2b5179e254a8801d5547c7489d
+      internalID: 1094938855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_70
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 4
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dae238fe42784c4dbc246944ca7daad
+      internalID: 770616646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_71
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 4
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6738f5c969e5da341bcb94b0ed1630b3
+      internalID: 2053572603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_0: 1953792727
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_1: -1162087588
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_10: -474118390
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_11: -906340680
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_12: -1937011091
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_13: -986291829
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_14: 1369350142
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_15: -598825167
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_16: 704044197
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_17: -2070086298
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_18: -479363261
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_19: 585763592
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_2: 308889837
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_20: 1350955867
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_21: 1008987518
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_22: 277443059
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_23: -1551150699
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_24: 96049556
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_25: -617127461
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_26: -282235510
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_27: -129475655
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_28: -202519862
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_29: -620627548
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_3: 323719210
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_30: 103337434
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_31: 1894486233
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_32: -1711781106
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_33: -980506119
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_34: -1025364317
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_35: -1231502159
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_36: -1054031708
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_37: -1056077783
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_38: 814164214
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_39: 1177183343
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_4: 942610924
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_40: -398897710
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_41: 503955973
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_42: -2012994193
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_43: -1217254176
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_44: -871876773
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_45: 1940873178
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_46: -406966167
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_47: 1986541963
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_48: 2104550050
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_49: -668550453
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_5: 1075218470
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_50: 1746733761
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_51: 904820569
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_52: -308786432
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_53: 1752001910
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_54: 845017990
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_55: 1656006921
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_56: 948858419
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_57: 272781892
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_58: -1593304065
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_59: 1075859832
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_6: -1447625507
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_60: -1387712877
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_61: -1528581397
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_62: 234007407
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_63: 2100774832
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_64: -429628870
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_65: 734577968
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_66: 599268401
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_67: 1831983955
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_68: -298132172
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_69: 1094938855
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_7: -1781718955
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_70: 770616646
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_71: 2053572603
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_72: 2097403873
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_73: -148874415
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_74: -1401309602
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_75: 489774256
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_76: 350956140
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_77: -1330397299
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_78: 896095730
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_79: 1604944883
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_8: -919370819
+      DS DSi - Digimon World Dusk Dawn - Dusk NPCs Minor_9: -523914998
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
