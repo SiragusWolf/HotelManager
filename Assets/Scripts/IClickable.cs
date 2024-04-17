@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Monster : MonoBehaviour
+public interface IClickable
 {
-    public void EnterRoom(){}
+    public void OnClick(GameObject selectedObject);
 }
