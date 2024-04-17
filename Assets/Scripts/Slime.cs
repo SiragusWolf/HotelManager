@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fireman : Monster, ISelectable
+public class Slime : Monster, ISelectable
 {
     public void OnSelect()
     {
-        Debug.Log("Fireman seleccionado");
+        Debug.Log("Slime seleccionado");
     }
 
     public void OnDeselect()
     {
-        Debug.Log("Fireman deseleccionado");
+        Debug.Log("Slime deseleccionado");
     }
 }
