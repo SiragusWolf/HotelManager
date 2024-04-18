@@ -27,6 +27,8 @@ public class Room : MonoBehaviour, IClickable
             Debug.Log(("Se metió al monstruo ", selectedObject.name));
         }
     }
+
+   
     
     
     
