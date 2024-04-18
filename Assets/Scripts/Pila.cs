@@ -5,28 +5,40 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
-public class Pila<TDA> : MonoBehaviour
+public class Pila<GameObject> : MonoBehaviour
 {
-    private readonly List<TDA> pila = new List<TDA>();
+   
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
 
-    public void Push(TDA item)
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+    private readonly List<GameObject> pila = new List<GameObject>();
+
+    public void Push(GameObject item)
     {
         pila.Add(item);
     }
 
-    public TDA Pop()
+    public GameObject Pop()
     {
         if (pila.Count == 0)
         {
             throw new InvalidOperationException("La pila esta vacia");
         }
 
-        TDA item = pila[pila.Count - 1];
+        GameObject item = pila[pila.Count - 1];
         pila.RemoveAt(pila.Count-1);
         return item;
     }
 
-    public TDA Peek()
+    public GameObject Peek()
     {
         if (pila.Count == 0)
         {
