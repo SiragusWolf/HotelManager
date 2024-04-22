@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Room : MonoBehaviour, IClickable
 {
+    public int roomLevel;
+    
     public bool isOccupied;
     public GameObject currentMonster;
 
@@ -28,9 +30,14 @@ public class Room : MonoBehaviour, IClickable
         }
     }
 
-   
-    
-    
-    
+    private void levelUp()
+    {
+        
+    }
+
+    private void updateLevel()
+    {
+        
+    }
     
 }
