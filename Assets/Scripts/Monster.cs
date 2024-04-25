@@ -15,4 +15,6 @@ public abstract class Monster : MonoBehaviour
     public virtual void EnterRoom(Room room){}
     
     public virtual void ExitRoom(){}
+    
+    public virtual void moveUpQueue(){}
 }

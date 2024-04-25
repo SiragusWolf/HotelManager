@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Slime : Monster, ISelectable
 {
+    private Rigidbody2D _rb;
     private SpriteRenderer _spriteRenderer;
     private Room room;
 
     private void Awake()
     {
+        _rb = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
@@ -16,12 +18,14 @@ public class Slime : Monster, ISelectable
     {
         if (!isInRoom)
         {
+            _rb.velocity = new Vector2(3, 0);
             TimeWaiting += Time.deltaTime;
             if (TimeWaiting > patience)
             {
                 Satisfaction -= Time.deltaTime * 0.1f;
                 Debug.Log(this.name + " está impaciente!");
             }
+            
         }
 
         if (isInRoom)
@@ -51,5 +55,10 @@ public class Slime : Monster, ISelectable
         _spriteRenderer.enabled = false;
         transform.position = room.transform.position;
         this.room = room;
+    }
+
+    public override void moveUpQueue()
+    {
+        _rb.velocity = new Vector2(5*Time.deltaTime, 0);
     }
 }

@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class AssistantsManager : MonoBehaviour
 {
+    
+    
     //[SerializeField] private List<GameObject> Workers = new List<GameObject>();
     [SerializeField] private List<GameObject> Assistants = new List<GameObject>();
     [SerializeField] private bool isWaiting  = false;

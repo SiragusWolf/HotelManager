@@ -6,11 +6,13 @@ using UnityEngine;
 
 public class Fireman : Monster, ISelectable
 {
+    private Rigidbody2D _rb;
     private SpriteRenderer _spriteRenderer;
     private Room room;
 
     private void Awake()
     {
+        _rb = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
@@ -18,6 +20,7 @@ public class Fireman : Monster, ISelectable
     {
         if (!isInRoom)
         {
+            _rb.velocity = new Vector2(2, 0);
             TimeWaiting += Time.deltaTime;
             if (TimeWaiting > patience)
             {
@@ -30,13 +33,19 @@ public class Fireman : Monster, ISelectable
         if (isInRoom)
         {
             TimeInRoom += Time.deltaTime;
+            Satisfaction += Time.deltaTime * room.roomLevel;
             if (TimeInRoom > stayTime)
             {
                 Debug.Log(this.name + " se va! Satisfacción final: " + Satisfaction);
                 room.isOccupied = false;
+                if (Satisfaction > 0)
+                {
+                    GameManager.Instance.Currency += Satisfaction;
+                }
                 //room.currentMonster = null;
                 Destroy(this.gameObject);
             }
+            
         }
     }
 
@@ -57,6 +66,9 @@ public class Fireman : Monster, ISelectable
         transform.position = room.transform.position;
         this.room = room;
     }
-    
-    
+
+    public override void moveUpQueue()
+    {
+        _rb.velocity = new Vector2(5*Time.deltaTime, 0);
+    }
 }

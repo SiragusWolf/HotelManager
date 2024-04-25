@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Room : MonoBehaviour, IClickable
 {
@@ -9,6 +11,15 @@ public class Room : MonoBehaviour, IClickable
     
     public bool isOccupied;
     public GameObject currentMonster;
+
+    [SerializeField] private SpriteRenderer _spriteRenderer;
+    [SerializeField] private Sprite[] doorLevelSprites;
+
+    private void Awake()
+    {
+        _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        updateLevelSprite();
+    }
 
     private void Update()
     {
@@ -27,17 +38,39 @@ public class Room : MonoBehaviour, IClickable
             selectedObject.GetComponent<Monster>().EnterRoom(this);
             isOccupied = true;
             Debug.Log(("Se metió al monstruo ", selectedObject.name));
+            InputManager.Instance.clearSelected();
+        }
+        else if (selectedObject.GetComponent<RoomUpgrade>() != null)
+        {
+            levelUp();
+            InputManager.Instance.clearSelected();
         }
     }
 
     private void levelUp()
     {
-        
+        if (roomLevel < 2 && GameManager.Instance.Currency >= 100)
+        {
+            GameManager.Instance.Currency -= 100;
+            roomLevel++;
+        } else if (GameManager.Instance.Currency < 100)
+        {
+            Debug.Log("No tenes suficiente oro!");
+        }
+        updateLevelSprite();
     }
 
-    private void updateLevel()
+    private void updateLevelSprite()
     {
-        
+        if (roomLevel > 2)
+        {
+            roomLevel = 2;
+        }
+        _spriteRenderer.sprite = doorLevelSprites[roomLevel];
     }
-    
+
+    private void roomCleared()
+    {
+        currentMonster = null;
+    }
 }
