@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 public class InputManager : MonoBehaviour
 {
     public static InputManager Instance;
+    private AssistantsManager assManager;
     private void Awake()
     {
         if (Instance != null) 
@@ -18,7 +19,10 @@ public class InputManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
         Instance = this; 
         _mainCamera = Camera.main;
+
+        assManager = GameObject.FindGameObjectWithTag("AssistantManager").GetComponent<AssistantsManager>();
     }
+    
     private Camera _mainCamera;
     [SerializeField] private GameObject _selectedObject;
     [SerializeField] private GameObject _clickedObject;
@@ -68,6 +72,11 @@ public class InputManager : MonoBehaviour
     public void UpgradeRoom()
     {
         _selectedObject = _roomUpgrade;
+    }
+
+    public void RoomService()
+    {
+        _selectedObject = assManager.Pop();
     }
 
     public void clearSelected()

@@ -9,6 +9,7 @@ public class Fireman : Monster, ISelectable
     private Rigidbody2D _rb;
     private SpriteRenderer _spriteRenderer;
     private Room room;
+    private float assistantMod;
 
     private void Awake()
     {
@@ -27,17 +28,28 @@ public class Fireman : Monster, ISelectable
                 Satisfaction -= Time.deltaTime * 0.1f;
                 Debug.Log(this.name + " está impaciente!");
             }
-            
         }
 
         if (isInRoom)
         {
+            if (room.isAssisted)
+            {
+                assistantMod = room.currentAssistantRef.AssistantSkill;
+                if (room.currentAssistantRef.FireFriendly)
+                {
+                    assistantMod = room.currentAssistantRef.AssistantSkill * 2;
+                }
+            }
+            else
+            {
+                assistantMod = 0;
+            }
             TimeInRoom += Time.deltaTime;
-            Satisfaction += Time.deltaTime * room.roomLevel;
+            Satisfaction += Time.deltaTime * room.roomLevel + Time.deltaTime * assistantMod;
             if (TimeInRoom > stayTime)
             {
                 Debug.Log(this.name + " se va! Satisfacción final: " + Satisfaction);
-                room.isOccupied = false;
+                room.roomCleared();
                 if (Satisfaction > 0)
                 {
                     GameManager.Instance.Currency += Satisfaction;

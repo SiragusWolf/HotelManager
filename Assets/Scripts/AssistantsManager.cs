@@ -6,20 +6,15 @@ using UnityEngine;
 
 public class AssistantsManager : MonoBehaviour
 {
-    
-    
-    //[SerializeField] private List<GameObject> Workers = new List<GameObject>();
     [SerializeField] private List<GameObject> Assistants = new List<GameObject>();
+    
     [SerializeField] private bool isWaiting  = false;
     [SerializeField] private GameObject[] Rooms;
     public int roomClick = 0;
+    public List<GameObject> PilaPositions;
 
-    public void RoomService()
+    public void RoomService(GameObject assistant, GameObject selectedRoom)
     {
-        GameObject selectedRoom = Rooms[roomClick];
-        //llamar con pop a un worker
-        GameObject assistant = Pop();
-        //assistant.SetActive(false);
         if (assistant != null)
         {
             Debug.Log("Se trajo a "+ assistant.name + " a la habitacion " + selectedRoom.name);
@@ -31,12 +26,7 @@ public class AssistantsManager : MonoBehaviour
             Debug.Log("No hay asistentes disponibles");
         }
         
-
-
-  
-
         roomClick++;
-
     }
     IEnumerator WaitAndPush(GameObject assistant)
     {
@@ -47,7 +37,8 @@ public class AssistantsManager : MonoBehaviour
         //guarda nuevamente
         Push(assistant);
         Debug.Log("trabajador volvio: "+assistant.name);
-        assistant.SetActive(true);
+        assistant.GetComponent<Assistant>().room.assistantCleared();
+        //assistant.SetActive(true);
     }
     public void returnWorker(GameObject worker)
     {
@@ -68,8 +59,16 @@ public class AssistantsManager : MonoBehaviour
         }
         GameObject assistant = Assistants[Assistants.Count - 1];
         Assistants.RemoveAt(Assistants.Count-1);
-        assistant.SetActive(false);//posible a sacar
+        //assistant.SetActive(false);//posible a sacar
         return assistant;
+    }
+
+    public void getLastTransform()
+    {
+        for (int i = 0; i < PilaPositions.Count; i++)
+        {
+            
+        }
     }
     private void Update()
     {

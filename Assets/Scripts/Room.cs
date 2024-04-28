@@ -10,7 +10,10 @@ public class Room : MonoBehaviour, IClickable
     public int roomLevel;
     
     public bool isOccupied;
+    public bool isAssisted;
     public GameObject currentMonster;
+    public GameObject currentAssistant;
+    public Assistant currentAssistantRef;
 
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private Sprite[] doorLevelSprites;
@@ -23,10 +26,10 @@ public class Room : MonoBehaviour, IClickable
 
     private void Update()
     {
-        if (isOccupied)
+        /*if (isOccupied)
         {
-            currentMonster.GetComponent<Monster>().TimeInRoom += Time.deltaTime;
-        }
+            //currentMonster.GetComponent<Monster>().TimeInRoom += Time.deltaTime;
+        }*/
     }
 
     public void OnClick(GameObject selectedObject)
@@ -44,6 +47,14 @@ public class Room : MonoBehaviour, IClickable
         {
             levelUp();
             InputManager.Instance.clearSelected();
+        }
+        else if (selectedObject.GetComponent<Assistant>() != null)
+        {
+            GetComponent<DoorState>().isOpen = true;
+            currentAssistant = selectedObject;
+            isAssisted = true;
+            currentAssistantRef = currentAssistant.GetComponent<Assistant>();
+            currentAssistantRef.EnterRoom(this);
         }
     }
 
@@ -69,8 +80,15 @@ public class Room : MonoBehaviour, IClickable
         _spriteRenderer.sprite = doorLevelSprites[roomLevel];
     }
 
-    private void roomCleared()
+    public void roomCleared()
     {
         currentMonster = null;
+        isOccupied = false;
+    }
+
+    public void assistantCleared()
+    {
+        currentAssistant = null;
+        isAssisted = false;
     }
 }
