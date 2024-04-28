@@ -101,10 +101,13 @@ MonoBehaviour:
   isInRoom: 0
   room: {fileID: 0}
   AssistantSkill: 1.5
+  ServiceTime: 5
   FireFriendly: 1
   SlimeFriendly: 0
   FishFriendly: 0
   GhostFriendly: 0
+  TimeElapsed: 0
+  currentPosition: {fileID: 0}
 --- !u!1 &1664369950633237362
 GameObject:
   m_ObjectHideFlags: 0

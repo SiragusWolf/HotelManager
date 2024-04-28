@@ -1,18 +1,27 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PilaPosition : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject currentAssistant;
+
+    private void Awake()
     {
-        
+        if (currentAssistant != null)
+        {
+            currentAssistant.GetComponent<Assistant>().currentPosition = this.gameObject;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void clearPosition()
     {
-        
+        currentAssistant = null;
+    }
+
+    public void assignPosition(GameObject assistant)
+    {
+        currentAssistant = assistant;
     }
 }

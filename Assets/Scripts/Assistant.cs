@@ -13,8 +13,11 @@ public class Assistant : MonoBehaviour, ISelectable
     public bool SlimeFriendly;
     public bool FishFriendly;
     public bool GhostFriendly;
+    //forma provisional de darle "tipos" a los asistentes
     [SerializeField] private float TimeElapsed;
     private AssistantsManager assManager;
+    public GameObject currentPosition;
+    private GameObject newPosition;
 
     void Awake()
     {
@@ -41,18 +44,25 @@ public class Assistant : MonoBehaviour, ISelectable
     public void EnterRoom(Room room)
     {
         isInRoom = true;
-        _spriteRenderer.enabled = false;
         transform.position = room.transform.position;
+        _spriteRenderer.enabled = false;
         this.room = room;
         assManager.RoomService(this.gameObject, room.gameObject);
+        currentPosition.GetComponent<PilaPosition>().clearPosition();
     }
 
     public void ExitRoom()
     {
+        _spriteRenderer.enabled = true;
+        room.assistantCleared();
+        assManager.Push(this.gameObject);
+
+        newPosition = assManager.getLastPosition();
+        newPosition.GetComponent<PilaPosition>().assignPosition(this.gameObject);
+        transform.position = newPosition.GetComponent<Transform>().position;
         isInRoom = false;
         room = null;
-        _spriteRenderer.enabled = true;
-        //transform.position = assManager.
+        //newPosition = null;
     }
 
     public void OnSelect()

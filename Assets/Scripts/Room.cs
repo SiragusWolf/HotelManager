@@ -48,7 +48,7 @@ public class Room : MonoBehaviour, IClickable
             levelUp();
             InputManager.Instance.clearSelected();
         }
-        else if (selectedObject.GetComponent<Assistant>() != null)
+        else if (selectedObject.GetComponent<Assistant>() != null && isOccupied)
         {
             GetComponent<DoorState>().isOpen = true;
             currentAssistant = selectedObject;
