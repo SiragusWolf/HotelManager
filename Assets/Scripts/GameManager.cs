@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float timeForNextMonster;
     private ColaTest MonsterQueue;
     private TimeManager tm;
+    public float Currency;
+    [SerializeField] private float satisfactionGoal;
+    public float TotalSatisfaction;
     
     private void Awake()
     {
@@ -37,6 +40,18 @@ public class GameManager : MonoBehaviour
             NewMonsterTime();
             timeSinceLastMonster = 0;
         }
+
+        if (tm.TotalTime > tm.dayDuration * 4)
+        {
+            if (TotalSatisfaction >= satisfactionGoal)
+            {
+                Debug.Log("You win!");
+            }
+            else
+            {
+                Debug.Log("You lose :(");
+            }
+        }
     }
 
     private void NewMonster()
@@ -48,8 +63,10 @@ public class GameManager : MonoBehaviour
     {
         timeForNextMonster = Random.Range(5, 15);
     }
+    
+    
 
-    public float Currency;
+  
     
     
 

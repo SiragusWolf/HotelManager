@@ -7,17 +7,34 @@ public class TimeManager : MonoBehaviour
 {
     public const int hoursInDay = 24, minutesInHour = 60;
 
-    public float dayDuration = 30f;
+    public float dayDuration;
 
     float totalTime = 0;
+
+    public float TotalTime
+    {
+        get { return totalTime; }
+    }
+
     float currentTime = 0;
 
+    [SerializeField] private GameObject noche;
+    //[SerializeField] private GameObject dia;
+    
 
     // Update is called once per frame
     void Update()
     {
         totalTime += Time.deltaTime;
         currentTime = totalTime % dayDuration;
+        if (currentTime < (dayDuration * 0.3) || currentTime > (dayDuration * 0.8))
+        {
+            noche.SetActive(true);
+        }
+        else
+        {
+            noche.SetActive(false);
+        }
     }
 
     public float GetHour()

@@ -53,6 +53,7 @@ public class Fireman : Monster, ISelectable
                 if (Satisfaction > 0)
                 {
                     GameManager.Instance.Currency += Satisfaction;
+                    GameManager.Instance.TotalSatisfaction += Satisfaction;
                 }
                 //room.currentMonster = null;
                 Destroy(this.gameObject);

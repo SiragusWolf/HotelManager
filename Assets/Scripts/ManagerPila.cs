@@ -16,8 +16,8 @@ public class ManagerPila : MonoBehaviour
     [SerializeField] public GameObject warning;
     public GameObject[] habitaciones;
     public int RoomIndex =0;
-
-//pila trabajadores activos
+    
+    //pila trabajadores activos
     public void PushPilaActive(GameObject item,GameObject room)
     {
         pilaActive.Add(item);
@@ -50,6 +50,7 @@ public class ManagerPila : MonoBehaviour
             item.transform.position = pilaLocations[pilaEspera.Count - 1].transform.position;
             Debug.Log("jaime nro: "+pilaEspera.Count);
     }
+    
     public GameObject Pop()
     {
         if (pilaEspera.Count == 0)
@@ -115,6 +116,4 @@ public class ManagerPila : MonoBehaviour
         //mete a jaime a la pila de disponibles
         //Push(prefabJaime);
     }
-    
-
 }

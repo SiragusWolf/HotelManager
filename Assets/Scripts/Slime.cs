@@ -47,7 +47,12 @@ public class Slime : Monster, ISelectable
             if (TimeInRoom > stayTime)
             {
                 Debug.Log(this.name + " se va! Satisfacción final: " + Satisfaction);
-                room.isOccupied = false;
+                room.roomCleared();
+                if (Satisfaction > 0)
+                {
+                    GameManager.Instance.Currency += Satisfaction;
+                    GameManager.Instance.TotalSatisfaction += Satisfaction;
+                }
                 Destroy(this.gameObject);
             }
         }

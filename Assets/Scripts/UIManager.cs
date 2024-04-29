@@ -17,6 +17,6 @@ public class UIManager : MonoBehaviour
 
     void Update()
     {
-        currencyCounterRef.text = GameManager.Instance.Currency.ToString();
+        currencyCounterRef.text = Mathf.FloorToInt(GameManager.Instance.Currency).ToString();
     }
 }
