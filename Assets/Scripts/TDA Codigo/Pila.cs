@@ -8,17 +8,6 @@ using UnityEngine;
 public class Pila<GameObject> : MonoBehaviour
 {
    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private readonly List<GameObject> pila = new List<GameObject>();
 
     public void Push(GameObject item)

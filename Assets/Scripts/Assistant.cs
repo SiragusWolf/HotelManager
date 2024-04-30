@@ -19,6 +19,8 @@ public class Assistant : MonoBehaviour, ISelectable
     public GameObject currentPosition;
     private GameObject newPosition;
 
+    public PilaNueva _pilaNueva;
+
     void Awake()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -44,22 +46,35 @@ public class Assistant : MonoBehaviour, ISelectable
     public void EnterRoom(Room room)
     {
         isInRoom = true;
-        transform.position = room.transform.position;
-        _spriteRenderer.enabled = false;
-        this.room = room;
-        assManager.RoomService(this.gameObject, room.gameObject);
-        currentPosition.GetComponent<PilaPosition>().clearPosition();
+        gameObject.transform.position = room.transform.position;
+        // transform.position = room.transform.position;
+        //
+        // _spriteRenderer.enabled = false;
+         this.room = room;
+        // assManager.RoomService(this.gameObject, room.gameObject);
+        // currentPosition.GetComponent<PilaPosition>().clearPosition();
     }
 
     public void ExitRoom()
     {
         _spriteRenderer.enabled = true;
         room.assistantCleared();
-        assManager.Push(this.gameObject);
+        //assManager.Push(this.gameObject);
 
-        newPosition = assManager.getLastPosition();
-        newPosition.GetComponent<PilaPosition>().assignPosition(this.gameObject);
-        transform.position = newPosition.GetComponent<Transform>().position;
+        //newPosition = assManager.getLastPosition();
+        //newPosition.GetComponent<PilaPosition>().assignPosition(this.gameObject);
+        //transform.position = newPosition.GetComponent<Transform>().position;
+        //_pilaNueva.volverAlServicio(this.gameObject);
+        
+        _pilaNueva.pruebaPush();
+       // GameObject jaime =_pilaNueva._pilaAux.Pop(); //retorno de work(1) a standby(2)
+        //index siendo 2 se dejaria StandbyPosition[2].position
+        //jaime.transform.position = standByPos[_pila.index].position;
+        //trabajando[_pilaAux.index] = jaime; //simula la pila StandBy
+        //_pilaNueva._pila.Push(jaime);
+        //
+        
+        
         isInRoom = false;
         room = null;
         //newPosition = null;

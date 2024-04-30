@@ -8,6 +8,7 @@ public class InputManager : MonoBehaviour
 {
     public static InputManager Instance;
     private AssistantsManager assManager;
+    public PilaNueva _pilaNueva;
     private void Awake()
     {
         if (Instance != null) 
@@ -25,9 +26,10 @@ public class InputManager : MonoBehaviour
     
     private Camera _mainCamera;
     [SerializeField] private GameObject _selectedObject;
-    [SerializeField] private GameObject _clickedObject;
+    [SerializeField] public GameObject _clickedObject;
     [SerializeField] private GameObject _roomUpgrade;
-
+    public bool roomOk;
+    public GameObject selectedRoom;
     public void OnClick(InputAction.CallbackContext context)
     {
         if (!context.started) return;
@@ -56,6 +58,7 @@ public class InputManager : MonoBehaviour
             
             if (monoBehaviour is IClickable tempClickable)
             {
+                
                 _clickedObject = rayhit.collider.gameObject;
                 Debug.Log(("Objeto ", _clickedObject.name, " clickeado"));
                 
@@ -76,8 +79,34 @@ public class InputManager : MonoBehaviour
 
     public void RoomService()
     {
-        _selectedObject = assManager.Pop();
+        //_selectedObject = assManager.Pop();
+        //_selectedObject = nuevaPila.Pop();
+        //_selectedObject= _pilaNueva.servicioHabitacion();
+        if (_selectedObject == null)
+        {
+            Debug.Log("Se intento llamar el RoomService() pero error    --- -------------");
+        }
     }
+
+    public void ACtivarService()
+    {
+        GameObject jaime = _pilaNueva.checkService();
+  
+       
+        if (roomOk == true)
+        {
+            roomOk = false;
+        }
+        else
+        {
+            roomOk = true;
+        }
+        if (jaime == null) roomOk = false;
+        _selectedObject = jaime;
+
+    }
+
+   
 
     public void clearSelected()
     {

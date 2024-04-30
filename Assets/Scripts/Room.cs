@@ -48,12 +48,22 @@ public class Room : MonoBehaviour, IClickable
             levelUp();
             InputManager.Instance.clearSelected();
         }
-        else if (selectedObject.GetComponent<Assistant>() != null && isOccupied)
+        else if (selectedObject.GetComponent<Assistant>() != null && isOccupied && InputManager.Instance.roomOk == true)
         {
             GetComponent<DoorState>().isOpen = true;
-            currentAssistant = selectedObject;
+            //currentAssistant = selectedObject;
+            //currentAssistant =InputManager.Instance._pilaNueva.servicioHabitacion();
+            currentAssistant = InputManager.Instance._pilaNueva._pilaAux.LastItem();
+            InputManager.Instance._pilaNueva.pruebaPop();
             isAssisted = true;
             currentAssistantRef = currentAssistant.GetComponent<Assistant>();
+            InputManager.Instance.roomOk = false;
+            
+            
+            
+            
+            
+            // currentAssistant.transform.position = this.transform.position;
             currentAssistantRef.EnterRoom(this);
         }
     }
