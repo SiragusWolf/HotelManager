@@ -39,8 +39,8 @@ public class PilaNueva : MonoBehaviour
 
     public void Start()
     {
-        _pila = new PilaOk(3);
-        _pilaAux = new PilaOk(3);
+        _pila = new PilaOk(3,"-pila");
+        _pilaAux = new PilaOk(3,"-pilaAux");
         //Jaime1.transform.position = posiciones[]
         iniciarPila();
     }
@@ -74,7 +74,7 @@ public class PilaNueva : MonoBehaviour
     public void pruebaPush()
     {
         GameObject jaime =_pilaAux.Pop(); //retorno de work(1) a standby(2)
-        Debug.Log("se intenta popear de working a standby"+jaime.name+" "+_pilaAux.index);
+        Debug.Log("se intenta popear de working a standby"+jaime.name+" "+_pilaAux.index + _pilaAux.name);
         //index siendo 2 se dejaria StandbyPosition[2].position
         jaime.transform.position = standByPos[_pila.index].position;
         trabajando[_pilaAux.index] = jaime; //simula la pila StandBy
@@ -140,12 +140,14 @@ public class PilaOk
     public GameObject[] items = null;
     public int index;
     public bool isActive;
+    public string name;
 
-    public PilaOk(int cantidad)
+    public PilaOk(int cantidad,string nombre)
     {
         items = new GameObject[cantidad];
         isActive = true;
         index = 0;
+        name = nombre;
     }
 
     
@@ -172,7 +174,7 @@ public class PilaOk
         {
             items[index] = newItem;
             index++;
-            Debug.Log("se intenta pushear "+ newItem+" en index:"+index);
+            Debug.Log("se intenta pushear "+ newItem+" en index:"+index + " de pila "+name);
         }
         else
         {

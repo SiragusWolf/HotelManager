@@ -37,7 +37,7 @@ public class InputManager : MonoBehaviour
         var rayhit = Physics2D.GetRayIntersection(_mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue()));
         if (!rayhit.collider) return;
         
-        Debug.Log(rayhit.collider.gameObject.name);
+        //Debug.Log(rayhit.collider.gameObject.name);
         
         var tempMonoArray = rayhit.collider.gameObject.GetComponents<MonoBehaviour>();
  
@@ -60,7 +60,7 @@ public class InputManager : MonoBehaviour
             {
                 
                 _clickedObject = rayhit.collider.gameObject;
-                Debug.Log(("Objeto ", _clickedObject.name, " clickeado"));
+                //Debug.Log(("Objeto ", _clickedObject.name, " clickeado"));
                 
                 if (_selectedObject != null)
                 {

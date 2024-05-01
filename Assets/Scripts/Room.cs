@@ -40,7 +40,7 @@ public class Room : MonoBehaviour, IClickable
             currentMonster = selectedObject;
             selectedObject.GetComponent<Monster>().EnterRoom(this);
             isOccupied = true;
-            Debug.Log(("Se metió al monstruo ", selectedObject.name));
+            //Debug.Log(("Se metió al monstruo ", selectedObject.name));
             InputManager.Instance.clearSelected();
         }
         else if (selectedObject.GetComponent<RoomUpgrade>() != null)
@@ -51,13 +51,17 @@ public class Room : MonoBehaviour, IClickable
         else if (selectedObject.GetComponent<Assistant>() != null && isOccupied && InputManager.Instance.roomOk == true)
         {
             GetComponent<DoorState>().isOpen = true;
-            //currentAssistant = selectedObject;
+            currentAssistant = selectedObject;
             //currentAssistant =InputManager.Instance._pilaNueva.servicioHabitacion();
-            currentAssistant = InputManager.Instance._pilaNueva._pilaAux.LastItem();
+            //currentAssistant = InputManager.Instance._pilaNueva._pilaAux.LastItem();
+            //Instantiate(currentAssistant, this.transform);
+            Debug.Log("current assistant" + currentAssistant.name);
             InputManager.Instance._pilaNueva.pruebaPop();
             isAssisted = true;
             currentAssistantRef = currentAssistant.GetComponent<Assistant>();
             InputManager.Instance.roomOk = false;
+            InputManager.Instance.clearSelected();
+            
             
             
             

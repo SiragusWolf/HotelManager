@@ -64,12 +64,12 @@ public class Fireman : Monster, ISelectable
 
     public void OnSelect()
     {
-        Debug.Log("Fireman seleccionado");
+        //Debug.Log("Fireman seleccionado");
     }
 
     public void OnDeselect()
     {
-        Debug.Log("Fireman deseleccionado");
+        //Debug.Log("Fireman deseleccionado");
     }
 
     public override void EnterRoom(Room room)

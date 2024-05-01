@@ -37,7 +37,7 @@ public class ColaTest : MonoBehaviour
         Instantiate(item, colaStart.position,Quaternion.identity);
         Clients.Add(item);
         position++;
-        Debug.Log("posicion nueva: "+position);
+        //Debug.Log("posicion nueva: "+position);
     }
 
     public GameObject Dequeue()

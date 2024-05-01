@@ -59,6 +59,7 @@ public class Assistant : MonoBehaviour, ISelectable
     {
         _spriteRenderer.enabled = true;
         room.assistantCleared();
+        TimeElapsed = 0;
         //assManager.Push(this.gameObject);
 
         //newPosition = assManager.getLastPosition();

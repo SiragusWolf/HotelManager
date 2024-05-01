@@ -24,7 +24,7 @@ public class Slime : Monster, ISelectable
             if (TimeWaiting > patience)
             {
                 Satisfaction -= Time.deltaTime * 0.1f;
-                Debug.Log(this.name + " está impaciente!");
+                //Debug.Log(this.name + " está impaciente!");
             }
         }
 
@@ -59,12 +59,12 @@ public class Slime : Monster, ISelectable
     }
     public void OnSelect()
     {
-        Debug.Log("Slime seleccionado");
+        //Debug.Log("Slime seleccionado");
     }
 
     public void OnDeselect()
     {
-        Debug.Log("Slime deseleccionado");
+        //Debug.Log("Slime deseleccionado");
     }
     
     public override void EnterRoom(Room room)
