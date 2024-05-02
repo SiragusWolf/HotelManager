@@ -13,13 +13,15 @@ public class Slime : Monster, ISelectable
     {
         _rb = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        isInRoom = false;
+        //.transform.position = new Vector3(0, 0, 0);
     }
 
     public void Update()
     {
         if (!isInRoom)
         {
-            _rb.velocity = new Vector2(3, 0);
+           // _rb.velocity = new Vector2(3, 0);
             TimeWaiting += Time.deltaTime;
             if (TimeWaiting > patience)
             {
@@ -53,7 +55,8 @@ public class Slime : Monster, ISelectable
                     GameManager.Instance.Currency += Satisfaction;
                     GameManager.Instance.TotalSatisfaction += Satisfaction;
                 }
-                Destroy(this.gameObject);
+                //Destroy(this.gameObject);
+                this.gameObject.SetActive(false);
             }
         }
     }
@@ -70,13 +73,13 @@ public class Slime : Monster, ISelectable
     public override void EnterRoom(Room room)
     {
         isInRoom = true;
-        _spriteRenderer.enabled = false;
+        //_spriteRenderer.enabled = false;
         transform.position = room.transform.position;
         this.room = room;
     }
 
     public override void moveUpQueue()
     {
-        _rb.velocity = new Vector2(5*Time.deltaTime, 0);
+        //_rb.velocity = new Vector2(5*Time.deltaTime, 0);
     }
 }

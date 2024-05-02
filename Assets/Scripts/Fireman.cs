@@ -15,18 +15,20 @@ public class Fireman : Monster, ISelectable
     {
         _rb = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        isInRoom = false;
+        //this.transform.position = new Vector3(0, 0, 0);
     }
 
     public void Update()
     {
         if (!isInRoom)
         {
-            _rb.velocity = new Vector2(2, 0);
+            //_rb.velocity = new Vector2(2, 0);
             TimeWaiting += Time.deltaTime;
             if (TimeWaiting > patience)
             {
                 Satisfaction -= Time.deltaTime * 0.1f;
-                Debug.Log(this.name + " está impaciente!");
+                //Debug.Log(this.name + " está impaciente!");
             }
         }
 
@@ -56,7 +58,8 @@ public class Fireman : Monster, ISelectable
                     GameManager.Instance.TotalSatisfaction += Satisfaction;
                 }
                 //room.currentMonster = null;
-                Destroy(this.gameObject);
+                this.gameObject.SetActive(false);
+                //Destroy(this.gameObject);
             }
             
         }
@@ -75,13 +78,13 @@ public class Fireman : Monster, ISelectable
     public override void EnterRoom(Room room)
     {
         isInRoom = true;
-        _spriteRenderer.enabled = false;
+        //_spriteRenderer.enabled = false;
         transform.position = room.transform.position;
         this.room = room;
     }
 
     public override void moveUpQueue()
     {
-        _rb.velocity = new Vector2(5*Time.deltaTime, 0);
+        //_rb.velocity = new Vector2(5*Time.deltaTime, 0);
     }
 }

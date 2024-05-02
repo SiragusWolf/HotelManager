@@ -9,7 +9,7 @@ public class TimeManager : MonoBehaviour
 
     public float dayDuration;
 
-    float totalTime = 0;
+    public float totalTime = 0;
 
     public float TotalTime
     {

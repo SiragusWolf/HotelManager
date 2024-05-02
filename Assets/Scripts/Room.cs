@@ -14,10 +14,12 @@ public class Room : MonoBehaviour, IClickable
     public GameObject currentMonster;
     public GameObject currentAssistant;
     public Assistant currentAssistantRef;
+    public GameObject isOccupiedIcon;
 
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private Sprite[] doorLevelSprites;
 
+    
     private void Awake()
     {
         _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
@@ -26,6 +28,14 @@ public class Room : MonoBehaviour, IClickable
 
     private void Update()
     {
+        if (isOccupied)
+        {
+            isOccupiedIcon.SetActive(true);
+        }
+        else
+        {
+            isOccupiedIcon.SetActive(false);
+        }
         /*if (isOccupied)
         {
             //currentMonster.GetComponent<Monster>().TimeInRoom += Time.deltaTime;
@@ -37,10 +47,22 @@ public class Room : MonoBehaviour, IClickable
         if (selectedObject.GetComponent<Monster>() != null && !isOccupied)
         {
             GetComponent<DoorState>().isOpen = true;
-            currentMonster = selectedObject;
-            selectedObject.GetComponent<Monster>().EnterRoom(this);
+            //currentMonster = selectedObject;
+            currentMonster = InputManager.Instance._ColaNueva._colaNueva.FirstItem();
+            if (currentMonster!=null)
+            {
+                currentMonster = InputManager.Instance._ColaNueva.DequeueTest();
+            }
+           
+            Debug.Log("room recibio:" + currentMonster);
+            if (currentMonster!=null)
+            {
+                currentMonster.GetComponent<Monster>().EnterRoom(this);
+            }
+           
             isOccupied = true;
             //Debug.Log(("Se metió al monstruo ", selectedObject.name));
+            //InputManager.Instance._ColaNueva.DequeueTest();
             InputManager.Instance.clearSelected();
         }
         else if (selectedObject.GetComponent<RoomUpgrade>() != null)

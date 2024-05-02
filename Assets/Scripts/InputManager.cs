@@ -9,6 +9,7 @@ public class InputManager : MonoBehaviour
     public static InputManager Instance;
     private AssistantsManager assManager;
     public PilaNueva _pilaNueva;
+    public ColaNueva _ColaNueva;
     private void Awake()
     {
         if (Instance != null) 
@@ -23,13 +24,27 @@ public class InputManager : MonoBehaviour
 
         assManager = GameObject.FindGameObjectWithTag("AssistantManager").GetComponent<AssistantsManager>();
     }
-    
+
+ 
+
     private Camera _mainCamera;
     [SerializeField] private GameObject _selectedObject;
     [SerializeField] public GameObject _clickedObject;
     [SerializeField] private GameObject _roomUpgrade;
     public bool roomOk;
     public GameObject selectedRoom;
+    
+    
+    
+    private void Update()
+    {
+        if (GameManager.Instance.isPause == true)
+        {
+            _selectedObject = null;
+        }
+    }
+    
+    
     public void OnClick(InputAction.CallbackContext context)
     {
         if (!context.started) return;
@@ -86,6 +101,13 @@ public class InputManager : MonoBehaviour
         {
             Debug.Log("Se intento llamar el RoomService() pero error    --- -------------");
         }
+    }
+
+    public void recieveGuest()
+    {
+        GameObject peekCola = _ColaNueva._colaNueva.FirstItem();
+        _selectedObject = peekCola;
+        Debug.Log("se peekeo " + peekCola.name);
     }
 
     public void ACtivarService()
