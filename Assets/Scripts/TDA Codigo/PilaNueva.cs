@@ -59,17 +59,7 @@ public class PilaNueva : MonoBehaviour
         trabajando[_pilaAux.index] = jaime; //simula la pila solo para observar
         _pilaAux.Push(jaime);
     }
-    public GameObject servicioHabitacion()
-    {
- 
-            GameObject jaime = _pila.Pop(); //se saca de pilaStandBy (3) y se manda a pilaWork(0)
-            //index es 3-1 en pop por ende lo manda al array[2]
-            //jaime.transform.position = trabajandoPos[_pilaAux.index].position;
-            trabajando[_pilaAux.index] = jaime; //simula la pila solo para observar
-            _pilaAux.Push(jaime);
-            return jaime;
-
-    }   
+  
 
     public void pruebaPush()
     {
@@ -90,7 +80,17 @@ public class PilaNueva : MonoBehaviour
         _pila.Push(asistente);
     }
 
+    public GameObject servicioHabitacion()
+    {
+ 
+        GameObject jaime = _pila.Pop(); //se saca de pilaStandBy (3) y se manda a pilaWork(0)
+        //index es 3-1 en pop por ende lo manda al array[2]
+        //jaime.transform.position = trabajandoPos[_pilaAux.index].position;
+        trabajando[_pilaAux.index] = jaime; //simula la pila solo para observar
+        _pilaAux.Push(jaime);
+        return jaime;
 
+    }   
     public void iniciarPila()
     {
         _pila.Push(Jaime1);

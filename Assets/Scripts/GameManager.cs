@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
             timeSinceLastMonster = 0;
         }
 
-        if (tm.TotalTime > tm.dayDuration * 4)
+        if (tm.TotalTime > tm.dayDuration * 3)
         {
             if (TotalSatisfaction >= satisfactionGoal)
             {

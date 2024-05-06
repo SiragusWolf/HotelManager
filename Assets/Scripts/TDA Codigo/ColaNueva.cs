@@ -63,33 +63,7 @@ public class ColaNueva : MonoBehaviour
          }
       }
    }
-   public void moverMonstros2()
-   {
-      for (int i = 0; i < _colaNueva.index; i++)
-      {
-         if (_colaNueva.items[i] != null)
-         {
-            //Debug.Log("la posicion "+i+" de la cola no esta vacia");
-            visualCola[i].transform.position = posiciones[_colaNueva.index-1-i].position;
-            Debug.Log("se mueve copia a posicion "+(_colaNueva.index-1-i));
-         }
-      }
-   }
 
-   public void moveToNext()
-   {
-      for (int i=0;i<visualCola.Length;i++)
-      {
-         if (i==0)
-         {
-            
-           
-            visualCola[i].transform.GetChild(0).gameObject.SetActive(false);
-         }
-         Transform aux;
-         
-      }
-   }
    public void moverMonstros4()
    {
       int indexAux=_colaNueva.index;

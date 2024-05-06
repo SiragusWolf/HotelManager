@@ -20574,7 +20574,7 @@ MonoBehaviour:
   timeForNextMonster: 5
   monsterQueueNueva: {fileID: 1034197834}
   Currency: 200
-  satisfactionGoal: 0
+  satisfactionGoal: 200
   TotalSatisfaction: 0
   UIWin: {fileID: 1742387665}
   UILose: {fileID: 1473217133}
@@ -35265,7 +35265,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2056432157}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac646c3ee5ead2d47a4b59dfda3fe340, type: 3}
   m_Name: 
@@ -36713,6 +36713,10 @@ PrefabInstance:
       propertyPath: _pilaNueva
       value: 
       objectReference: {fileID: 2132340542}
+    - target: {fileID: 1509721553433894401, guid: 5542ae2e7e6b3784db5c21f415106047, type: 3}
+      propertyPath: SlimeFriendly
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5293197798446169004, guid: 5542ae2e7e6b3784db5c21f415106047, type: 3}
       propertyPath: m_Name
       value: Jaime Manager
@@ -37375,6 +37379,18 @@ PrefabInstance:
       propertyPath: _pilaNueva
       value: 
       objectReference: {fileID: 2132340542}
+    - target: {fileID: 5531850605063452895, guid: 8cb8e5d3a61e4484ca3305eeef84f280, type: 3}
+      propertyPath: FishFriendly
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531850605063452895, guid: 8cb8e5d3a61e4484ca3305eeef84f280, type: 3}
+      propertyPath: GhostFriendly
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531850605063452895, guid: 8cb8e5d3a61e4484ca3305eeef84f280, type: 3}
+      propertyPath: SlimeFriendly
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cb8e5d3a61e4484ca3305eeef84f280, type: 3}
 --- !u!1001 &7664043289291490139
