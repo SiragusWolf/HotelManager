@@ -25,9 +25,15 @@ public class Hotel : MonoBehaviour
             puertasGrafo.AgregarArista(aux.v1, aux.v2, aux.peso);
         }
 
-        AlgDijkstra dijkstra = new AlgDijkstra(puertasGrafo, puertas[o]);
+        
+    }
 
-        GameObject destino = puertas[d];
+    public void CalcularCamino(GameObject destino)
+    {
+        AlgDijkstra dijkstra = new AlgDijkstra(puertasGrafo, puertas[0]);
+
+        //GameObject destino = puertas[d];
+        
         List<GameObject> camino = dijkstra.ObtenerCamino(destino);
         
         IluminarCamino(destino, camino);
@@ -35,10 +41,13 @@ public class Hotel : MonoBehaviour
 
     void IluminarCamino(GameObject destino, List<GameObject> camino)
     {
+        
+        
         foreach (GameObject paso in camino)
         {
             paso.GetComponent<SpriteRenderer>().color = Color.blue;
         }
+        
         destino.GetComponent<SpriteRenderer>().color = Color.red;
     }
     
