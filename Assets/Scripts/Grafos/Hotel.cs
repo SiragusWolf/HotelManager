@@ -38,6 +38,17 @@ public class Hotel : MonoBehaviour
         
         IluminarCamino(destino, camino);
     }
+    
+    public List<GameObject> DevolverCamino(GameObject destino)
+    {
+        AlgDijkstra dijkstra = new AlgDijkstra(puertasGrafo, puertas[0]);
+
+        //GameObject destino = puertas[d];
+        
+        List<GameObject> camino = dijkstra.ObtenerCamino(destino);
+
+        return camino;
+    }
 
     void IluminarCamino(GameObject destino, List<GameObject> camino)
     {
@@ -48,10 +59,12 @@ public class Hotel : MonoBehaviour
             paso.GetComponent<SpriteRenderer>().color = Color.blue;
         }
         
+        camino[0].GetComponent<SpriteRenderer>().color = Color.green;
+        camino[1].GetComponent<SpriteRenderer>().color = Color.cyan;
+        
         destino.GetComponent<SpriteRenderer>().color = Color.red;
     }
     
-    // Update is called once per frame
     void Update()
     {
         

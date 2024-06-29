@@ -22,6 +22,8 @@ public class NodoRoom : MonoBehaviour, IClickable
         
         
         //OnClick llamo al calculo de camino desde el origen (seteado como el lobby del hotel) al destino (room seleccionadoo)
-        hotelRef.CalcularCamino(this.gameObject);
+        //hotelRef.CalcularCamino(this.gameObject);
+
+        selectedObject.GetComponent<MovDijkstra>().Movimiento(hotelRef, this.gameObject);
     }
 }
