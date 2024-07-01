@@ -55,8 +55,8 @@ public class MainUiManager : MonoBehaviour
         }
         
 
-        BestTime1.text = Timez[0];
-        BestTime2.text = Timez[1];
-        BestTime3.text = Timez[2];
+        // BestTime1.text = Timez[0];
+        // BestTime2.text = Timez[1];
+        // BestTime3.text = Timez[2];
     }
 }

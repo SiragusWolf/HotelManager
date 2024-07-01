@@ -57,7 +57,7 @@ MonoBehaviour:
   highNode: {fileID: 0}
   tf: {fileID: 0}
   isRoot: 0
-  rootPosition: {x: 330, y: 330, z: 0}
+  rootPosition: {x: 680, y: 360, z: 0}
 --- !u!222 &5756037997642577179
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -10,9 +10,20 @@ public class BusquedaBinaria : MonoBehaviour
     public ABBNode root;
     public ABBNode nodePrefab;
     private ABBNode currentNode;
+    public static BusquedaBinaria Instance;
     
 
+    private void Awake()
+    {
+        if (Instance != null)
+        {
+            Destroy(this);
+            return;
+        }
 
+        DontDestroyOnLoad(this.gameObject);
+        Instance = this;
+    }
 
     public void scoreOff()
     {
@@ -27,7 +38,7 @@ public class BusquedaBinaria : MonoBehaviour
     {
         //valueToAdd = float.Parse(inputBox.text);
         ABBNode newNode = Instantiate(nodePrefab);
-        newNode.transform.SetParent(GameObject.Find("Canvas").transform);
+        newNode.transform.SetParent(GameObject.Find("ABB Score").transform);
         newNode.score = valueToAdd;
         bool nodeAdded = false;
         if (!root)

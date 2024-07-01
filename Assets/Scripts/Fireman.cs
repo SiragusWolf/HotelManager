@@ -58,6 +58,7 @@ public class Fireman : Monster, ISelectable
                 {
                     GameManager.Instance.Currency += Satisfaction;
                     GameManager.Instance.TotalSatisfaction += Satisfaction;
+                    BusquedaBinaria.Instance.AddNode(Satisfaction);
                 }
                 //room.currentMonster = null;
                 this.gameObject.SetActive(false);

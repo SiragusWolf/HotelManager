@@ -54,6 +54,7 @@ public class Slime : Monster, ISelectable
                 {
                     GameManager.Instance.Currency += Satisfaction;
                     GameManager.Instance.TotalSatisfaction += Satisfaction;
+                    BusquedaBinaria.Instance.AddNode(Satisfaction);
                 }
                 //Destroy(this.gameObject);
                 this.gameObject.SetActive(false);
