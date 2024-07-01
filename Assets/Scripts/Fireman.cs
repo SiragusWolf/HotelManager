@@ -64,10 +64,6 @@ public class Fireman : Monster, ISelectable
                 this.gameObject.SetActive(false);
                 //Destroy(this.gameObject);
             }
-            
-            
-            
-        
     }
 
     public void OnSelect()

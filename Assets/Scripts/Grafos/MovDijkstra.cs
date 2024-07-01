@@ -22,7 +22,7 @@ public class MovDijkstra : MonoBehaviour, ISelectable
 
     private void Start()
     {
-        proximoNodoPos = transform.position;
+        //proximoNodoPos = transform.position;
         posInicial = transform.position;
         _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
@@ -48,6 +48,17 @@ public class MovDijkstra : MonoBehaviour, ISelectable
             _spriteRenderer.enabled = true;
         }
 
+        if (proximoNodoPos.x < transform.position.x)
+        {
+            _spriteRenderer.flipX = false;
+        }
+        else
+        {
+            _spriteRenderer.flipX = true;
+        }
+        
+        
+
         if (proximoNodoPos != transform.position) return;
 
         if (transform.position == destinoPos)
@@ -56,7 +67,7 @@ public class MovDijkstra : MonoBehaviour, ISelectable
             _spriteRenderer.enabled = false;
         }
         
-        proximoNodoPos = proximoNodo().transform.position;
+        if (proximoNodo() != null) proximoNodoPos = proximoNodo().transform.position;
     }
 
     public void Movimiento(Hotel hotelR, GameObject destino)
@@ -74,6 +85,8 @@ public class MovDijkstra : MonoBehaviour, ISelectable
             bool pasoN = false;
             pasosCumplidos.Add(pasoN);
         }
+        
+        proximoNodoPos = proximoNodo().transform.position;
     }
 
     private GameObject proximoNodo()
@@ -105,8 +118,8 @@ public class MovDijkstra : MonoBehaviour, ISelectable
     //para testing, no necesario en el juego final
     private void ResetPos()
     {
-        transform.position = posInicial;
-        proximoNodoPos = posInicial;
+        //transform.position = posInicial;
+        //proximoNodoPos = posInicial;
     }
     
     public void OnSelect()
