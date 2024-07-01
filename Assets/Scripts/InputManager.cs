@@ -109,7 +109,7 @@ public class InputManager : MonoBehaviour
     {
         GameObject peekCola = _ColaNueva._colaNueva.FirstItem();
         _selectedObject = peekCola;
-        Debug.Log("se peekeo " + peekCola.name);
+        //Debug.Log("se peekeo " + peekCola.name);
         SetTime.Invoke();
     }
 
