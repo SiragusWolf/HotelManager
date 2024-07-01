@@ -28,7 +28,7 @@ public class Fireman : Monster, ISelectable
             if (TimeWaiting > patience)
             {
                 Satisfaction -= Time.deltaTime * 0.1f;
-                //Debug.Log(this.name + " está impaciente!");
+                //Debug.Log(this.name + " esta impaciente!");
             }
         }
 

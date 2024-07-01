@@ -14,6 +14,15 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         currencyCounterRef = currencyCounter.GetComponent<TextMeshProUGUI>();
+
+        Timez[0] = "";
+        Timez[1] = "";
+        Timez[2] = "";
+
+        GameManager.Instance.NewBestTimes.AddListener(SetTimez);
+
+
+
     }
 
     void Update()
@@ -28,4 +37,25 @@ public class UIManager : MonoBehaviour
             infoService.SetActive(false);
         }
     }
+
+
+
+    private string [] Timez = new string[3];
+    public TextMeshProUGUI BestTime1;
+    public TextMeshProUGUI BestTime2;
+    public TextMeshProUGUI BestTime3;
+   
+
+    private void SetTimez()
+    {
+        int[] NewTimezA = GameManager.Instance.bestTimes;
+        Timez[0] = NewTimezA[0] + " s";
+        Timez[1] = NewTimezA[1] + " s";
+        Timez[2] = NewTimezA[2] + " s";
+
+        BestTime1.text = Timez[0];
+        BestTime2.text = Timez[1];
+        BestTime3.text = Timez[2];
+    }
+
 }

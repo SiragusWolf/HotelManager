@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Events;
 
 public class InputManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class InputManager : MonoBehaviour
     private AssistantsManager assManager;
     public PilaNueva _pilaNueva;
     public ColaNueva _ColaNueva;
+    public UnityEvent SetTime = new UnityEvent();
     private void Awake()
     {
         if (Instance != null) 
@@ -108,6 +110,7 @@ public class InputManager : MonoBehaviour
         GameObject peekCola = _ColaNueva._colaNueva.FirstItem();
         _selectedObject = peekCola;
         Debug.Log("se peekeo " + peekCola.name);
+        SetTime.Invoke();
     }
 
     public void ACtivarService()

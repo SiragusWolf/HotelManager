@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
@@ -36,6 +37,11 @@ public class GameManager : MonoBehaviour
 
         MonsterQueue = FindObjectOfType<ColaTest>();
         tm = FindObjectOfType<TimeManager>();
+
+        bestTimes [0] = int.MaxValue;
+        bestTimes [1] = int.MaxValue;
+        bestTimes [2] = int.MaxValue;
+
     }
 
     private void Update()
@@ -109,6 +115,22 @@ private void NewMonster()
     }
     
     
+    public int [] bestTimes = new int [3];
+    private QuickSort myQuicksort = new QuickSort();
+    public UnityEvent NewBestTimes = new UnityEvent();
+
+    public void WaitBestTimes(int time)
+    {
+        int[] times = { bestTimes[0], bestTimes[1], bestTimes[2], time};
+        times = myQuicksort.QSort(times, 0, times.Length - 1);
+
+        bestTimes[0] = times[0]; 
+        bestTimes[1] = times[1];
+        bestTimes[2] = times[2];
+
+        NewBestTimes.Invoke();
+
+    }
 
   
     
