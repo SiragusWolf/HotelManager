@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6610913734634528631}
   - component: {fileID: 7376793508559329994}
   - component: {fileID: -2411960913071827968}
+  - component: {fileID: -8538872963129773953}
   m_Layer: 0
   m_Name: Ghost Test
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6610913734634528629}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 1e2db128b4ee52c458f922938d26129d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -116,3 +117,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d4cd62cd884c2c49946bac8f755dea3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-8538872963129773953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6610913734634528629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aed015043da755f4682aa028fb55e003, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5

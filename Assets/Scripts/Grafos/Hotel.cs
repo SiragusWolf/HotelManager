@@ -23,6 +23,7 @@ public class Hotel : MonoBehaviour
         {
             Arista aux = pasillo.GetComponent<Arista>();
             puertasGrafo.AgregarArista(aux.v1, aux.v2, aux.peso);
+            puertasGrafo.AgregarArista(aux.v2, aux.v1, aux.peso);
         }
 
         
