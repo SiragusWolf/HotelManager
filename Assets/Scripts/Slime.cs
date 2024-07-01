@@ -74,8 +74,14 @@ public class Slime : Monster, ISelectable
     {
         isInRoom = true;
         //_spriteRenderer.enabled = false;
-        transform.position = room.transform.position;
+        //transform.position = room.transform.position;
+        
+        GameManager.Instance.WaitBestTimes((int)TimeWaiting);
+        GameObject hotelObj = GameObject.FindGameObjectWithTag("Hotel");
+        Hotel hotelRef = hotelObj.GetComponent<Hotel>();
+        
         this.room = room;
+        GetComponent<MovDijkstra>().Movimiento(hotelRef, this.room.gameObject);
     }
 
     public override void moveUpQueue()

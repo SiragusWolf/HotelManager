@@ -32,8 +32,8 @@ public class Fireman : Monster, ISelectable
             }
         }
 
-        if (isInRoom)
-        {
+        if (!isInRoom) return;
+        
             if (room.isAssisted)
             {
                 assistantMod = room.currentAssistantRef.AssistantSkill;
@@ -46,8 +46,10 @@ public class Fireman : Monster, ISelectable
             {
                 assistantMod = 0;
             }
+            
             TimeInRoom += Time.deltaTime;
             Satisfaction += Time.deltaTime * room.roomLevel + Time.deltaTime * assistantMod;
+            
             if (TimeInRoom > stayTime)
             {
                 Debug.Log(this.name + " se va! Satisfacción final: " + Satisfaction);
@@ -62,7 +64,9 @@ public class Fireman : Monster, ISelectable
                 //Destroy(this.gameObject);
             }
             
-        }
+            
+            
+        
     }
 
     public void OnSelect()
@@ -79,8 +83,14 @@ public class Fireman : Monster, ISelectable
     {
         isInRoom = true;
         //_spriteRenderer.enabled = false;
-        transform.position = room.transform.position;
+        //transform.position = room.transform.position;
+
+        GameManager.Instance.WaitBestTimes((int)TimeWaiting);
+        GameObject hotelObj = GameObject.FindGameObjectWithTag("Hotel");
+        Hotel hotelRef = hotelObj.GetComponent<Hotel>();
+        
         this.room = room;
+        GetComponent<MovDijkstra>().Movimiento(hotelRef, this.room.gameObject);
     }
 
     public override void moveUpQueue()

@@ -49,16 +49,20 @@ public class MovDijkstra : MonoBehaviour, ISelectable
         }
 
         if (proximoNodoPos != transform.position) return;
+
+        if (transform.position == destinoPos)
+        {
+            arrivedToDestination = true;
+            _spriteRenderer.enabled = false;
+        }
         
         proximoNodoPos = proximoNodo().transform.position;
-        
-        if (transform.position == destinoPos) arrivedToDestination = true;
     }
 
     public void Movimiento(Hotel hotelR, GameObject destino)
     {
         //ResetPos para testing, no necesario en el juego final
-        ResetPos();
+        //ResetPos();
         
         pasos = hotelR.DevolverCamino(destino);
         pasosCumplidos = new List<bool>();
@@ -69,21 +73,6 @@ public class MovDijkstra : MonoBehaviour, ISelectable
         {
             bool pasoN = false;
             pasosCumplidos.Add(pasoN);
-        }
-
-        for (int i = 0; i < pasos.Count; i++)
-        {
-            /*while (!pasosCumplidos[i])
-            {
-                float step =  speed * Time.deltaTime;
-                transform.position = Vector3.MoveTowards(transform.position, pasos[i].transform.position, step);
-                
-                if (transform.position == pasos[i].transform.position)
-                {
-                    pasosCumplidos[i] = true;
-                    Debug.Log("paso " + i + " cumplido. posicion actual:" + transform.position.x + transform.position.y);
-                }
-            }*/
         }
     }
 
