@@ -11,6 +11,8 @@ public class TimeManager : MonoBehaviour
 
     public float totalTime = 0;
 
+    [SerializeField] private bool ffw;
+
     public float TotalTime
     {
         get { return totalTime; }
@@ -34,6 +36,12 @@ public class TimeManager : MonoBehaviour
         else
         {
             noche.SetActive(false);
+        }
+
+        if (ffw)
+        {
+            totalTime += 25;
+            ffw = false;
         }
     }
 

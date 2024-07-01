@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     public float Currency;
     [SerializeField] private float satisfactionGoal;
     public float TotalSatisfaction;
+    
+    
 
     public GameObject UIWin;
     public GameObject UILose;
