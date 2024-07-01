@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class UIManager : MonoBehaviour
 {
@@ -15,11 +16,11 @@ public class UIManager : MonoBehaviour
     {
         currencyCounterRef = currencyCounter.GetComponent<TextMeshProUGUI>();
 
-        Timez[0] = "";
+        /*Timez[0] = "";
         Timez[1] = "";
         Timez[2] = "";
 
-        GameManager.Instance.NewBestTimes.AddListener(SetTimez);
+        GameManager.Instance.NewBestTimes.AddListener(SetTimez);*/
 
 
 
@@ -40,10 +41,10 @@ public class UIManager : MonoBehaviour
 
 
 
-    private string [] Timez = new string[3];
-    public TextMeshProUGUI BestTime1;
-    public TextMeshProUGUI BestTime2;
-    public TextMeshProUGUI BestTime3;
+    /*private string [] Timez = new string[3];
+    public TextMeshProUGUI MayTime;
+    public TextMeshProUGUI MidTime;
+    public TextMeshProUGUI MenTime;
    
 
     private void SetTimez()
@@ -53,9 +54,9 @@ public class UIManager : MonoBehaviour
         Timez[1] = NewTimezA[1] + " s";
         Timez[2] = NewTimezA[2] + " s";
 
-        BestTime1.text = Timez[0];
-        BestTime2.text = Timez[1];
-        BestTime3.text = Timez[2];
-    }
+        //MayTime.text = Timez[0];
+        MidTime.text = Timez[1];
+        MenTime.text = Timez[2];
+    }*/
 
 }

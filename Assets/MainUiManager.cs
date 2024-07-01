@@ -33,6 +33,8 @@ public class MainUiManager : MonoBehaviour
         {
             Timez[0] = NewTimezA[0] + " s";
         }
+
+
         if (NewTimezA[1] == int.MaxValue)
         {
             Timez[1] = 0 + " s";
@@ -41,6 +43,8 @@ public class MainUiManager : MonoBehaviour
         {
             Timez[1] = NewTimezA[1] + " s";
         }
+
+
         if (NewTimezA[2] == int.MaxValue)
         {
             Timez[2] = 0 + " s";
