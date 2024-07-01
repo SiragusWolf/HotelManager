@@ -84,6 +84,8 @@ public class Fireman : Monster, ISelectable
         isInRoom = true;
         //_spriteRenderer.enabled = false;
         //transform.position = room.transform.position;
+
+        GameManager.Instance.WaitBestTimes((int)TimeWaiting);
         GameObject hotelObj = GameObject.FindGameObjectWithTag("Hotel");
         Hotel hotelRef = hotelObj.GetComponent<Hotel>();
         

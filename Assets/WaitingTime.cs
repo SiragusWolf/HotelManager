@@ -20,10 +20,7 @@ public class WaitingTime : MonoBehaviour
 
     public void UpdateTime()
     {
-        GameManager.Instance.WaitBestTimes((int)time);
-
-
-
+        //GameManager.Instance.WaitBestTimes((int)time);
     }
     
 }
