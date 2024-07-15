@@ -108,7 +108,7 @@ public class GameManager : MonoBehaviour
 private void NewMonster()
     {
         //MonsterQueue.MonstruoIngresando();
-        monsterQueueNueva.MonstruoIngresando();
+        ColaNueva.Instance.MonstruoIngresando();
     }
 
     private void NewMonsterTime()

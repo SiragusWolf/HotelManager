@@ -201,7 +201,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &121876238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,6 +246,21 @@ MonoBehaviour:
   flag: 0
   contador: 0
   colaIndex: 0
+  contadorDequeue: 0
+  items:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  index: 0
+  isActive: 0
+  end: {fileID: 0}
+  front: {fileID: 0}
 --- !u!4 &121876239
 Transform:
   m_ObjectHideFlags: 0
@@ -278,6 +293,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3838284516603671755, guid: 376d0638209ccfb46829747ca4056d4e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -346522716493066713, guid: 376d0638209ccfb46829747ca4056d4e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4813644970509419645, guid: 376d0638209ccfb46829747ca4056d4e, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -326,6 +349,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: monstruo slime
       objectReference: {fileID: 0}
+    - target: {fileID: 4813644970509419646, guid: 376d0638209ccfb46829747ca4056d4e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 376d0638209ccfb46829747ca4056d4e, type: 3}
 --- !u!1001 &170407336
@@ -335,6 +362,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3838284516603671755, guid: 376d0638209ccfb46829747ca4056d4e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -346522716493066713, guid: 376d0638209ccfb46829747ca4056d4e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4813644970509419645, guid: 376d0638209ccfb46829747ca4056d4e, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -383,6 +418,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: monstruo slime (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4813644970509419646, guid: 376d0638209ccfb46829747ca4056d4e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 376d0638209ccfb46829747ca4056d4e, type: 3}
 --- !u!4 &200881782 stripped
@@ -405,7 +444,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &236220731
 RectTransform:
   m_ObjectHideFlags: 0
@@ -649,6 +688,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3390269633322466925, guid: 50de60d757fd8944196fcc2b7f837b88, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7039417508055564814, guid: 50de60d757fd8944196fcc2b7f837b88, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -696,6 +739,14 @@ PrefabInstance:
     - target: {fileID: 7039417508055564815, guid: 50de60d757fd8944196fcc2b7f837b88, type: 3}
       propertyPath: m_Name
       value: FishTest
+      objectReference: {fileID: 0}
+    - target: {fileID: 7039417508055564815, guid: 50de60d757fd8944196fcc2b7f837b88, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689353392053732498, guid: 50de60d757fd8944196fcc2b7f837b88, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50de60d757fd8944196fcc2b7f837b88, type: 3}
@@ -1168,9 +1219,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8538872963129773953, guid: 3b3bc371f9e40134489f8e3b1e2c2583, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2411960913071827968, guid: 3b3bc371f9e40134489f8e3b1e2c2583, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6610913734634528629, guid: 3b3bc371f9e40134489f8e3b1e2c2583, type: 3}
       propertyPath: m_Name
       value: Ghost Test (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6610913734634528629, guid: 3b3bc371f9e40134489f8e3b1e2c2583, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6610913734634528630, guid: 3b3bc371f9e40134489f8e3b1e2c2583, type: 3}
       propertyPath: m_RootOrder
@@ -1914,6 +1977,14 @@ MonoBehaviour:
   Room: {fileID: 0}
   copiaIndex: 0
   copiaIndexAuxiliar: 0
+  items: []
+  itemsAux: []
+  index: 0
+  indexAux: 0
+  isActive: 0
+  isActiveAux: 0
+  name: 
+  nameAux: 
 --- !u!4 &1293371843
 Transform:
   m_ObjectHideFlags: 0
@@ -2333,9 +2404,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8538872963129773953, guid: 3b3bc371f9e40134489f8e3b1e2c2583, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2411960913071827968, guid: 3b3bc371f9e40134489f8e3b1e2c2583, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6610913734634528629, guid: 3b3bc371f9e40134489f8e3b1e2c2583, type: 3}
       propertyPath: m_Name
       value: Ghost Test
+      objectReference: {fileID: 0}
+    - target: {fileID: 6610913734634528629, guid: 3b3bc371f9e40134489f8e3b1e2c2583, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6610913734634528630, guid: 3b3bc371f9e40134489f8e3b1e2c2583, type: 3}
       propertyPath: m_RootOrder
@@ -2991,9 +3074,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6322352472618804858, guid: 01cf47d9e0c73124e8bc5cb863c8be74, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1183310742798856082, guid: 01cf47d9e0c73124e8bc5cb863c8be74, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4213973811763343744, guid: 01cf47d9e0c73124e8bc5cb863c8be74, type: 3}
       propertyPath: m_Name
       value: monstruo fuego
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213973811763343744, guid: 01cf47d9e0c73124e8bc5cb863c8be74, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4213973811763343747, guid: 01cf47d9e0c73124e8bc5cb863c8be74, type: 3}
       propertyPath: m_RootOrder
@@ -3216,9 +3311,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6322352472618804858, guid: 01cf47d9e0c73124e8bc5cb863c8be74, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1183310742798856082, guid: 01cf47d9e0c73124e8bc5cb863c8be74, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4213973811763343744, guid: 01cf47d9e0c73124e8bc5cb863c8be74, type: 3}
       propertyPath: m_Name
       value: monstruo fuego (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213973811763343744, guid: 01cf47d9e0c73124e8bc5cb863c8be74, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4213973811763343747, guid: 01cf47d9e0c73124e8bc5cb863c8be74, type: 3}
       propertyPath: m_RootOrder
@@ -3281,7 +3388,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1794974235
 Transform:
   m_ObjectHideFlags: 0
@@ -3452,7 +3559,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2033216308
 RectTransform:
   m_ObjectHideFlags: 0

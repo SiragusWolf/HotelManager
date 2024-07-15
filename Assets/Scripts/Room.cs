@@ -48,7 +48,7 @@ public class Room : MonoBehaviour, IClickable
         {
             GetComponent<DoorState>().isOpen = true;
             //currentMonster = selectedObject;
-            currentMonster = InputManager.Instance._ColaNueva._colaNueva.FirstItem();
+            currentMonster = ColaNueva.Instance.FirstItem();
             if (currentMonster!=null)
             {
                 currentMonster = InputManager.Instance._ColaNueva.DequeueTest();

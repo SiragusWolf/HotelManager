@@ -107,7 +107,7 @@ public class InputManager : MonoBehaviour
 
     public void recieveGuest()
     {
-        GameObject peekCola = _ColaNueva._colaNueva.FirstItem();
+        GameObject peekCola = ColaNueva.Instance.FirstItem();
         _selectedObject = peekCola;
         //Debug.Log("se peekeo " + peekCola.name);
         SetTime.Invoke();
