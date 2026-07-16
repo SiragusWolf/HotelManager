@@ -77,7 +77,7 @@ public class Slime : Monster, ISelectable
         //_spriteRenderer.enabled = false;
         //transform.position = room.transform.position;
         
-        GameManager.Instance.WaitBestTimes((int)TimeWaiting);
+        RegisterWaitingTime();
         GameObject hotelObj = GameObject.FindGameObjectWithTag("Hotel");
         Hotel hotelRef = hotelObj.GetComponent<Hotel>();
         

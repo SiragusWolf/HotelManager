@@ -10,11 +10,13 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject currencyCounter;
     private TextMeshProUGUI currencyCounterRef;
     public GameObject infoService;
+    private TextMeshProUGUI infoServiceRef;
 
     // Update is called once per frame
     private void Start()
     {
         currencyCounterRef = currencyCounter.GetComponent<TextMeshProUGUI>();
+        infoServiceRef = infoService.GetComponent<TextMeshProUGUI>();
 
         /*Timez[0] = "";
         Timez[1] = "";
@@ -29,14 +31,62 @@ public class UIManager : MonoBehaviour
     void Update()
     {
         currencyCounterRef.text = Mathf.FloorToInt(GameManager.Instance.Currency).ToString();
-        if (InputManager.Instance.roomOk)
+        if (InputManager.Instance.serviceSelectionMode)
         {
             infoService.SetActive(true);
+            UpdateServiceInfo();
         }
         else
         {
             infoService.SetActive(false);
         }
+    }
+
+    private void UpdateServiceInfo()
+    {
+        if (infoServiceRef == null) return;
+
+        GameObject assistantObject = GetSelectedAssistant();
+        Assistant assistant = assistantObject != null ? assistantObject.GetComponent<Assistant>() : null;
+
+        if (assistant == null)
+        {
+            infoServiceRef.text = "Elige un mayordomo";
+            return;
+        }
+
+        infoServiceRef.text = assistantObject.name + " | Hab " + assistant.AssistantSkill.ToString("0") + " | " + GetAffinityText(assistant);
+    }
+
+    private GameObject GetSelectedAssistant()
+    {
+        if (InputManager.Instance != null && InputManager.Instance.SelectedServiceAssistant != null)
+        {
+            return InputManager.Instance.SelectedServiceAssistant;
+        }
+
+        if (InputManager.Instance != null && InputManager.Instance.SelectedObject != null)
+        {
+            Assistant selectedAssistant = InputManager.Instance.SelectedObject.GetComponent<Assistant>();
+            if (selectedAssistant != null && PilaNueva.Instance != null && PilaNueva.Instance.IsAvailable(InputManager.Instance.SelectedObject))
+            {
+                return InputManager.Instance.SelectedObject;
+            }
+        }
+
+        return null;
+    }
+
+    private string GetAffinityText(Assistant assistant)
+    {
+        List<string> affinities = new List<string>();
+
+        if (assistant.FireFriendly) affinities.Add("Fuego");
+        if (assistant.SlimeFriendly) affinities.Add("Slime");
+        if (assistant.FishFriendly) affinities.Add("Pez");
+        if (assistant.GhostFriendly) affinities.Add("Fantasma");
+
+        return affinities.Count > 0 ? string.Join(", ", affinities) : "General";
     }
 
 

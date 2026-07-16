@@ -1,14 +1,9 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class Room : MonoBehaviour, IClickable
 {
     public int roomLevel;
-    
+
     public bool isOccupied;
     public bool isAssisted;
     public GameObject currentMonster;
@@ -19,7 +14,6 @@ public class Room : MonoBehaviour, IClickable
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private Sprite[] doorLevelSprites;
 
-    
     private void Awake()
     {
         _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
@@ -28,41 +22,24 @@ public class Room : MonoBehaviour, IClickable
 
     private void Update()
     {
-        if (isOccupied)
-        {
-            isOccupiedIcon.SetActive(true);
-        }
-        else
-        {
-            isOccupiedIcon.SetActive(false);
-        }
-        /*if (isOccupied)
-        {
-            //currentMonster.GetComponent<Monster>().TimeInRoom += Time.deltaTime;
-        }*/
+        isOccupiedIcon.SetActive(isOccupied);
     }
 
     public void OnClick(GameObject selectedObject)
     {
         if (selectedObject.GetComponent<Monster>() != null && !isOccupied)
         {
+            currentMonster = InputManager.Instance._ColaNueva.DequeueTest();
+            if (currentMonster == null)
+            {
+                InputManager.Instance.clearSelected();
+                return;
+            }
+
             GetComponent<DoorState>().isOpen = true;
-            //currentMonster = selectedObject;
-            currentMonster = ColaNueva.Instance.FirstItem();
-            if (currentMonster!=null)
-            {
-                currentMonster = InputManager.Instance._ColaNueva.DequeueTest();
-            }
-           
             Debug.Log("room recibio:" + currentMonster);
-            if (currentMonster!=null)
-            {
-                currentMonster.GetComponent<Monster>().EnterRoom(this);
-            }
-           
+            currentMonster.GetComponent<Monster>().EnterRoom(this);
             isOccupied = true;
-            //Debug.Log(("Se metió al monstruo ", selectedObject.name));
-            //InputManager.Instance._ColaNueva.DequeueTest();
             InputManager.Instance.clearSelected();
         }
         else if (selectedObject.GetComponent<RoomUpgrade>() != null)
@@ -70,26 +47,21 @@ public class Room : MonoBehaviour, IClickable
             levelUp();
             InputManager.Instance.clearSelected();
         }
-        else if (selectedObject.GetComponent<Assistant>() != null && isOccupied && InputManager.Instance.roomOk == true)
+        else if (selectedObject.GetComponent<Assistant>() != null && isOccupied && !isAssisted && InputManager.Instance.roomOk == true)
         {
+            currentAssistant = InputManager.Instance.SelectedServiceAssistant != null ? InputManager.Instance.SelectedServiceAssistant : selectedObject;
+            if (!InputManager.Instance._pilaNueva.StartService(currentAssistant))
+            {
+                currentAssistant = null;
+                InputManager.Instance.ClearServiceSelection();
+                return;
+            }
+
             GetComponent<DoorState>().isOpen = true;
-            currentAssistant = selectedObject;
-            //currentAssistant =InputManager.Instance._pilaNueva.servicioHabitacion();
-            //currentAssistant = InputManager.Instance._pilaNueva._pilaAux.LastItem();
-            //Instantiate(currentAssistant, this.transform);
             Debug.Log("current assistant" + currentAssistant.name);
-            InputManager.Instance._pilaNueva.pruebaPop();
             isAssisted = true;
             currentAssistantRef = currentAssistant.GetComponent<Assistant>();
-            InputManager.Instance.roomOk = false;
-            InputManager.Instance.clearSelected();
-            
-            
-            
-            
-            
-            
-            // currentAssistant.transform.position = this.transform.position;
+            InputManager.Instance.ClearServiceSelection();
             currentAssistantRef.EnterRoom(this);
         }
     }
@@ -125,6 +97,7 @@ public class Room : MonoBehaviour, IClickable
     public void assistantCleared()
     {
         currentAssistant = null;
+        currentAssistantRef = null;
         isAssisted = false;
     }
 }

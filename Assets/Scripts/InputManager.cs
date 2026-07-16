@@ -34,7 +34,19 @@ public class InputManager : MonoBehaviour
     [SerializeField] public GameObject _clickedObject;
     [SerializeField] private GameObject _roomUpgrade;
     public bool roomOk;
+    public bool serviceSelectionMode;
     public GameObject selectedRoom;
+    public GameObject selectedServiceAssistant;
+
+    public GameObject SelectedObject
+    {
+        get { return _selectedObject; }
+    }
+
+    public GameObject SelectedServiceAssistant
+    {
+        get { return selectedServiceAssistant; }
+    }
     
     
     
@@ -53,6 +65,11 @@ public class InputManager : MonoBehaviour
 
         var rayhit = Physics2D.GetRayIntersection(_mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue()));
         if (!rayhit.collider) return;
+
+        if (serviceSelectionMode && TrySelectServiceAssistant(rayhit.collider.gameObject))
+        {
+            return;
+        }
         
         //Debug.Log(rayhit.collider.gameObject.name);
         
@@ -91,6 +108,9 @@ public class InputManager : MonoBehaviour
 
     public void UpgradeRoom()
     {
+        serviceSelectionMode = false;
+        roomOk = false;
+        selectedServiceAssistant = null;
         _selectedObject = _roomUpgrade;
     }
 
@@ -107,6 +127,9 @@ public class InputManager : MonoBehaviour
 
     public void recieveGuest()
     {
+        serviceSelectionMode = false;
+        roomOk = false;
+        selectedServiceAssistant = null;
         GameObject peekCola = ColaNueva.Instance.FirstItem();
         _selectedObject = peekCola;
         //Debug.Log("se peekeo " + peekCola.name);
@@ -115,19 +138,10 @@ public class InputManager : MonoBehaviour
 
     public void ACtivarService()
     {
-        GameObject jaime = _pilaNueva.checkService();
-  
-       
-        if (roomOk == true)
-        {
-            roomOk = false;
-        }
-        else
-        {
-            roomOk = true;
-        }
-        if (jaime == null) roomOk = false;
-        _selectedObject = jaime;
+        serviceSelectionMode = !serviceSelectionMode;
+        roomOk = false;
+        selectedServiceAssistant = null;
+        _selectedObject = null;
 
     }
 
@@ -136,6 +150,43 @@ public class InputManager : MonoBehaviour
     public void clearSelected()
     {
         _selectedObject = null;
+    }
+
+    public void ClearServiceSelection()
+    {
+        selectedServiceAssistant = null;
+        roomOk = false;
+        serviceSelectionMode = false;
+        clearSelected();
+    }
+
+    private bool TrySelectServiceAssistant(GameObject clickedObject)
+    {
+        Assistant assistant = clickedObject.GetComponent<Assistant>();
+        if (assistant == null)
+        {
+            assistant = clickedObject.GetComponentInParent<Assistant>();
+        }
+
+        if (assistant == null || assistant.isInRoom || !_pilaNueva.IsAvailable(assistant.gameObject))
+        {
+            return false;
+        }
+
+        if (_selectedObject != null && _selectedObject != assistant.gameObject)
+        {
+            ISelectable previousSelectable = _selectedObject.GetComponent<ISelectable>();
+            if (previousSelectable != null)
+            {
+                previousSelectable.OnDeselect();
+            }
+        }
+
+        selectedServiceAssistant = assistant.gameObject;
+        _selectedObject = selectedServiceAssistant;
+        roomOk = true;
+        assistant.OnSelect();
+        return true;
     }
 
     /*public static void GetInterfaces<T>(out List<T> resultList, GameObject objectToSearch) where T: class

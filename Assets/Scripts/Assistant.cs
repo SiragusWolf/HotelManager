@@ -24,7 +24,24 @@ public class Assistant : MonoBehaviour, ISelectable
     void Awake()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        EnsureClickableCollider();
         assManager = GameObject.FindGameObjectWithTag("AssistantManager").GetComponent<AssistantsManager>();
+    }
+
+    private void EnsureClickableCollider()
+    {
+        if (GetComponent<Collider2D>() != null) return;
+
+        BoxCollider2D clickCollider = gameObject.AddComponent<BoxCollider2D>();
+        if (_spriteRenderer != null && _spriteRenderer.sprite != null)
+        {
+            clickCollider.size = _spriteRenderer.sprite.bounds.size;
+            clickCollider.offset = _spriteRenderer.sprite.bounds.center;
+        }
+        else
+        {
+            clickCollider.size = new Vector2(1f, 2f);
+        }
     }
 
     // Update is called once per frame
@@ -58,7 +75,10 @@ public class Assistant : MonoBehaviour, ISelectable
     public void ExitRoom()
     {
         _spriteRenderer.enabled = true;
-        room.assistantCleared();
+        if (room != null)
+        {
+            room.assistantCleared();
+        }
         TimeElapsed = 0;
         //assManager.Push(this.gameObject);
 
@@ -67,7 +87,11 @@ public class Assistant : MonoBehaviour, ISelectable
         //transform.position = newPosition.GetComponent<Transform>().position;
         //_pilaNueva.volverAlServicio(this.gameObject);
         
-        _pilaNueva.pruebaPush();
+        PilaNueva pila = _pilaNueva != null ? _pilaNueva : PilaNueva.Instance;
+        if (pila != null)
+        {
+            pila.volverAlServicio(gameObject);
+        }
        // GameObject jaime =_pilaNueva._pilaAux.Pop(); //retorno de work(1) a standby(2)
         //index siendo 2 se dejaria StandbyPosition[2].position
         //jaime.transform.position = standByPos[_pila.index].position;
@@ -83,11 +107,18 @@ public class Assistant : MonoBehaviour, ISelectable
 
     public void OnSelect()
     {
-        
+        PilaNueva pila = _pilaNueva != null ? _pilaNueva : PilaNueva.Instance;
+        if (!isInRoom && pila != null && pila.IsAvailable(gameObject) && InputManager.Instance != null && InputManager.Instance.serviceSelectionMode)
+        {
+            InputManager.Instance.roomOk = true;
+        }
     }
 
     public void OnDeselect()
     {
-        
+        if (InputManager.Instance != null && !isInRoom && InputManager.Instance.SelectedServiceAssistant == gameObject)
+        {
+            InputManager.Instance.roomOk = false;
+        }
     }
 }

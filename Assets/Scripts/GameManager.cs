@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 using UnityEngine.Events;
@@ -17,8 +14,6 @@ public class GameManager : MonoBehaviour
     public float Currency;
     [SerializeField] private float satisfactionGoal;
     public float TotalSatisfaction;
-    
-    
 
     public GameObject UIWin;
     public GameObject UILose;
@@ -26,6 +21,8 @@ public class GameManager : MonoBehaviour
 
     public bool isPause;
     public GameObject pauseUI;
+    private bool gameEnded;
+
     private void Awake()
     {
         if (Instance != null)
@@ -40,14 +37,15 @@ public class GameManager : MonoBehaviour
         MonsterQueue = FindObjectOfType<ColaTest>();
         tm = FindObjectOfType<TimeManager>();
 
-        bestTimes [0] = int.MaxValue;
-        bestTimes [1] = int.MaxValue;
-        bestTimes [2] = int.MaxValue;
-
+        bestTimes[0] = int.MaxValue;
+        bestTimes[1] = int.MaxValue;
+        bestTimes[2] = int.MaxValue;
     }
 
     private void Update()
     {
+        if (gameEnded) return;
+
         timeSinceLastMonster += Time.deltaTime;
         if (timeSinceLastMonster > timeForNextMonster)
         {
@@ -58,16 +56,7 @@ public class GameManager : MonoBehaviour
 
         if (tm.TotalTime > tm.dayDuration * 3)
         {
-            if (TotalSatisfaction >= satisfactionGoal)
-            {
-                Debug.Log("You win!");
-                UIWin.SetActive(true);
-            }
-            else
-            {
-                UILose.SetActive(true);
-                Debug.Log("You lose :(");
-            }
+            EndGame();
         }
     }
 
@@ -82,10 +71,7 @@ public class GameManager : MonoBehaviour
 
             Currency -= 300;
         }
-
-
     }
-
 
     public void Pausa()
     {
@@ -93,21 +79,18 @@ public class GameManager : MonoBehaviour
         {
             pauseUI.SetActive(true);
             Time.timeScale = 0;
-            //InputManager.Instance.gameObject.SetActive(false);
             isPause = true;
         }
         else
         {
             pauseUI.SetActive(false);
             Time.timeScale = 1;
-            //InputManager.Instance.gameObject.SetActive(false);
             isPause = false;
         }
     }
 
-private void NewMonster()
+    private void NewMonster()
     {
-        //MonsterQueue.MonstruoIngresando();
         ColaNueva.Instance.MonstruoIngresando();
     }
 
@@ -115,27 +98,40 @@ private void NewMonster()
     {
         timeForNextMonster = Random.Range(5, 15);
     }
-    
-    
-    public int [] bestTimes = new int [3];
-    private QuickSort myQuicksort = new QuickSort();
+
+    private void EndGame()
+    {
+        gameEnded = true;
+        if (TotalSatisfaction >= satisfactionGoal)
+        {
+            Debug.Log("You win!");
+            UIWin.SetActive(true);
+        }
+        else
+        {
+            UILose.SetActive(true);
+            Debug.Log("You lose :(");
+        }
+    }
+
+    public int[] bestTimes = new int[3];
     public UnityEvent NewBestTimes = new UnityEvent();
 
     public void WaitBestTimes(int time)
     {
-        int[] times = { bestTimes[0], bestTimes[1], bestTimes[2], time};
-        times = myQuicksort.QSort(times, 0, times.Length - 1);
+        for (int i = 0; i < bestTimes.Length; i++)
+        {
+            if (time >= bestTimes[i]) continue;
 
-        bestTimes[0] = times[0]; 
-        bestTimes[1] = times[1];
-        bestTimes[2] = times[2];
+            for (int j = bestTimes.Length - 1; j > i; j--)
+            {
+                bestTimes[j] = bestTimes[j - 1];
+            }
+
+            bestTimes[i] = time;
+            break;
+        }
 
         NewBestTimes.Invoke();
-
     }
-
-  
-    
-    
-
 }

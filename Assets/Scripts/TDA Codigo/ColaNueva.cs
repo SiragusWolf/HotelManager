@@ -1,22 +1,17 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;using TDA_Codigo;
-using Unity.Mathematics;
+using TDA_Codigo;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class ColaNueva : MonoBehaviour, IColaInterface
 {
    [SerializeField] private GameObject[] pfMonster;
-   [SerializeField] private Transform[] posiciones;
    [SerializeField] private GameObject[] visualCola;
    public bool flag = true;
    public int contador = 0;
    public int colaIndex;
    public int contadorDequeue;
-   
-   
-   //arreglos cola
+
    public GameObject[] items = new GameObject[9];
    public int index;
    public bool isActive;
@@ -36,209 +31,210 @@ public class ColaNueva : MonoBehaviour, IColaInterface
          Destroy(gameObject);
       }
    }
+
    private void Start()
    {
       flag = true;
       items = IniciarCola(9);
       index = 0;
+      contadorDequeue = 0;
       isActive = true;
-      
    }
+
    private void Update()
    {
-      colaIndex = ColaNueva.Instance.index;
+      colaIndex = index;
    }
+
    public void ProbarEnqueue()
    {
-      Instantiate(pfMonster[contador],visualCola[ColaNueva.Instance.index].transform,false);
-      ColaNueva.Instance.Enqueue(pfMonster[contador]);
-      Debug.Log("se añadio a index "+(ColaNueva.Instance.index-1));
+      if (pfMonster.Length == 0)
+      {
+         Debug.Log("No hay prefabs de monstruos cargados");
+         return;
+      }
+
+      if (contador >= pfMonster.Length)
+      {
+         contador = 0;
+      }
+
+      GameObject monsterInstance = Instantiate(pfMonster[contador]);
+      Enqueue(monsterInstance);
       contador++;
-      moverMonstros();
    }
+
    public void moverMonstros()
    {
-      for (int i = 0; i < ColaNueva.Instance.items.Length; i++)
-      {
-         if (ColaNueva.Instance.items[i] != null)
-         {
-         }
-      }
+      RefreshVisualPositions();
    }
+
    public void moverMonstros4()
    {
-      int indexAux=ColaNueva.Instance.index;
-      int auxWhile = 0;
-      for (int i =indexAux;i>0;i--)
-      {
-         Transform aux=visualCola[i].transform.GetChild(0);
-            aux.SetParent(visualCola[i-1].transform);
-            aux.position = aux.parent.position;
-      }
-
-      contadorDequeue++;
-      for (int i = 0; i < contadorDequeue; i++)
-      {
-         //visualCola[0].transform.GetChild(i).gameObject.SetActive(false);
-      }
+      RefreshVisualPositions();
    }
+
    public void moverMonstros3()
    {
-      int indexAux=ColaNueva.Instance.index;
-      for (int i = 0; i < ColaNueva.Instance.index; i++)
-      {
-         
-         if (ColaNueva.Instance.items[i] != null)
-         {
-            if (indexAux == 0)
-            {
-               visualCola[indexAux].SetActive(false);
-               
-            }
-            else
-            {
-               GameObject aux = visualCola[indexAux];
-               visualCola[indexAux].transform.position = posiciones[indexAux-1].position;
-               visualCola[indexAux - 1] = aux;
-               indexAux--;
-               Debug.Log("se mueve copia a posicion "+(indexAux));
-            }
-         }
-      }
+      RefreshVisualPositions();
    }
+
    public void MonstruoIngresando()
    {
-      int monster = Random.Range(0, 4);
-      Instantiate(pfMonster[monster],visualCola[ColaNueva.Instance.index].transform,false);
-      visualCola[ColaNueva.Instance.index].transform.GetChild(0).transform.position = visualCola[ColaNueva.Instance.index].transform.position;
-      ColaNueva.Instance.Enqueue(pfMonster[monster]);
-      Debug.Log("se añadio a index "+(ColaNueva.Instance.index-1));
-      moverMonstros();
+      if (pfMonster.Length == 0)
+      {
+         Debug.Log("No hay prefabs de monstruos cargados");
+         return;
+      }
+
+      int monster = Random.Range(0, pfMonster.Length);
+      GameObject monsterInstance = Instantiate(pfMonster[monster]);
+      Enqueue(monsterInstance);
    }
+
    public GameObject DequeueTest()
    {
-      GameObject monstro;
-      monstro =ColaNueva.Instance.Dequeue();
-      Debug.Log("se recupero a "+monstro.name);
+      GameObject monstro = Dequeue();
+      if (monstro != null)
+      {
+         Debug.Log("se recupero a " + monstro.name);
+      }
 
-      monstro = visualCola[0].transform.GetChild(contadorDequeue).gameObject;
-      moverMonstros4();
       return monstro;
    }
+
    public int conseguirCola()
    {
-      int hijos = visualCola[0].transform.childCount;
-      Transform aux = visualCola[0].transform;
-      bool encontro = false;
-      int retorno = -1;
-      for (int i = 0; i <= contadorDequeue; i++)
-      {
-         //visualCola[0].transform.GetChild(i);
-         if (visualCola[0].transform.GetChild(i).name.Equals(ColaNueva.Instance.items[0].name))
-         {
-            encontro = true;
-            retorno = i;
-         }
-         else
-         {
-            encontro = false;
-         }
-      }
-
-      if (encontro)
-      {
-         return retorno;
-      }
-      else
-      {
-         return -1;
-      }
-      
-      // Debug.Log("***********cola pos 0 "+ _colaNueva.items[0].name);
-      // Debug.Log("***********cola visual 0"+visualCola[0].transform.GetChild(contadorDequeue).name);
-      
+      return IsEmpty() ? -1 : 0;
    }
+
    IEnumerator WaitAndMove(GameObject mostro)
    {
-     
       yield return new WaitForSeconds(2);
-      mostro.transform.position = posiciones[ColaNueva.Instance.index - 1].transform.position;
+      RefreshVisualPositions();
       Debug.Log("sacamos al 2do y lo movimo");
-      
-      
    }
+
    public GameObject[] IniciarCola(int cant)
    {
       return new GameObject[cant];
    }
+
    public GameObject Dequeue()
    {
-      if (index != 0)
-      {
-         index--;
-         GameObject dequeueItem = items[index];
-         items[index] = null;
-         return dequeueItem;
-      }
-      else
+      if (index == 0)
       {
          Debug.Log("La cola no existe");
          return null;
       }
+
+      GameObject dequeueItem = items[0];
+
+      for (int i = 1; i < index; i++)
+      {
+         items[i - 1] = items[i];
+      }
+
+      index--;
+      items[index] = null;
+      contadorDequeue++;
+
+      if (dequeueItem != null)
+      {
+         dequeueItem.transform.SetParent(null, true);
+      }
+
+      RefreshVisualPositions();
+      return dequeueItem;
    }
+
    public void Enqueue(GameObject newItem)
    {
-      if (isActive && index < items.Length)
+      if (!isActive)
       {
-         for (int i = 0; i < index; i++)
-         {
-            items[index - i] = items[index - 1 - i];
-         }
-      
-         items[0] = newItem;
-         index++;
+         Debug.Log("la cola no existe");
+         DestroyIfSceneObject(newItem);
+         return;
       }
-      else
+
+      if (newItem == null)
       {
-         Debug.Log("la cola no existe o esta llena");
+         Debug.Log("no se puede agregar un monstruo nulo");
+         return;
       }
+
+      if (index >= items.Length || index >= visualCola.Length)
+      {
+         Debug.Log("la cola esta llena");
+         DestroyIfSceneObject(newItem);
+         return;
+      }
+
+      items[index] = newItem;
+      Monster monster = newItem.GetComponent<Monster>();
+      if (monster != null)
+      {
+         monster.BeginWaiting();
+      }
+
+      index++;
+      Debug.Log("se anadio a index " + (index - 1));
+      RefreshVisualPositions();
    }
+
    public void Clear()
    {
       for (int i = 0; i < items.Length; i++)
       {
          items[i] = null;
       }
+
       index = 0;
+      contadorDequeue = 0;
+      RefreshVisualPositions();
    }
+
    public GameObject FirstItem()
    {
       if (index != 0)
       {
-         return items[index - 1];
+         return items[0];
       }
-      else
-      {
-         Debug.Log("La cola no existe");
-         return null;
-      }
+
+      Debug.Log("La cola no existe");
+      return null;
    }
+
    public bool IsEmpty()
    {
-      if (isActive)
-      {
-         if (index == 0)
-         {
-            return true;
-         }
-         else
-         {
-            return false;
-         }
-      }
-      else
+      if (!isActive)
       {
          throw new System.Exception("La cola no existe");
+      }
+
+      return index == 0;
+   }
+
+   private void RefreshVisualPositions()
+   {
+      for (int i = 0; i < index; i++)
+      {
+         if (items[i] == null || i >= visualCola.Length || visualCola[i] == null)
+         {
+            continue;
+         }
+
+         Transform slot = visualCola[i].transform;
+         items[i].transform.SetParent(slot, false);
+         items[i].transform.localPosition = Vector3.zero;
+      }
+   }
+
+   private void DestroyIfSceneObject(GameObject item)
+   {
+      if (item != null && item.scene.IsValid())
+      {
+         Destroy(item);
       }
    }
 }

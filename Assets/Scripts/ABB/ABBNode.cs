@@ -16,17 +16,29 @@ public class ABBNode : MonoBehaviour
     public bool isRoot;
     public Vector3 rootPosition;
 
-    private void Start()
+    private void Awake()
     {
         textValue = GetComponent<Text>();
-        textValue.text = score.ToString();
         tf = GetComponent<RectTransform>();
+    }
+
+    private void Start()
+    {
+        UpdateText();
 
     }
 
 
     private void Update()
     {
+        if (tf == null)
+        {
+            tf = GetComponent<RectTransform>();
+            if (tf == null) return;
+        }
+
+        UpdateText();
+
         if (isRoot)
         {
             tf.position = rootPosition;
@@ -34,12 +46,43 @@ public class ABBNode : MonoBehaviour
 
         if (lowNode)
         {
-            lowNode.tf.position = tf.position - tf.up * 15 - tf.right * 25;
+            RectTransform lowTransform = lowNode.GetRectTransform();
+            if (lowTransform != null)
+            {
+                lowTransform.position = tf.position - tf.up * 15 - tf.right * 25;
+            }
         }
 
         if (highNode)
         {
-            highNode.tf.position = tf.position + tf.right * 25 - tf.up * 15;
+            RectTransform highTransform = highNode.GetRectTransform();
+            if (highTransform != null)
+            {
+                highTransform.position = tf.position + tf.right * 25 - tf.up * 15;
+            }
+        }
+    }
+
+    private RectTransform GetRectTransform()
+    {
+        if (tf == null)
+        {
+            tf = GetComponent<RectTransform>();
+        }
+
+        return tf;
+    }
+
+    private void UpdateText()
+    {
+        if (textValue == null)
+        {
+            textValue = GetComponent<Text>();
+        }
+
+        if (textValue != null)
+        {
+            textValue.text = score.ToString("0");
         }
     }
 }

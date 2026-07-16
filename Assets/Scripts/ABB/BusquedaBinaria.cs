@@ -37,14 +37,18 @@ public class BusquedaBinaria : MonoBehaviour
     public void AddNode(float valueToAdd)
     {
         //valueToAdd = float.Parse(inputBox.text);
-        ABBNode newNode = Instantiate(nodePrefab);
-        newNode.transform.SetParent(GameObject.Find("ABB Score").transform);
+        Transform scoreParent = GetScoreParent();
+        ABBNode newNode = CreateNode(scoreParent);
         newNode.score = valueToAdd;
         bool nodeAdded = false;
         if (!root)
         {
             root = newNode;
             newNode.isRoot = true;
+            if (newNode.rootPosition == Vector3.zero)
+            {
+                newNode.rootPosition = scoreParent.position;
+            }
         }
         else
         {
@@ -83,6 +87,38 @@ public class BusquedaBinaria : MonoBehaviour
                 }
             }
         }
+    }
+
+    private Transform GetScoreParent()
+    {
+        GameObject scoreObject = GameObject.Find("ABB Score");
+        return scoreObject != null ? scoreObject.transform : transform;
+    }
+
+    private ABBNode CreateNode(Transform parent)
+    {
+        ABBNode newNode;
+        if (nodePrefab != null)
+        {
+            newNode = Instantiate(nodePrefab, parent);
+        }
+        else
+        {
+            GameObject nodeObject = new GameObject("ABB Node");
+            nodeObject.transform.SetParent(parent, false);
+
+            RectTransform rectTransform = nodeObject.AddComponent<RectTransform>();
+            rectTransform.sizeDelta = new Vector2(80, 24);
+
+            Text text = nodeObject.AddComponent<Text>();
+            text.font = Resources.GetBuiltinResource<Font>("Arial.ttf");
+            text.alignment = TextAnchor.MiddleCenter;
+            text.color = Color.black;
+
+            newNode = nodeObject.AddComponent<ABBNode>();
+        }
+
+        return newNode;
     }
 
     public ABBNode FindNode(float valueToFind)

@@ -1,16 +1,9 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Reflection;
 using TDA_Codigo;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 
 public class PilaNueva : MonoBehaviour, IPilaInterface
 {
     public static PilaNueva Instance;
-    // public PilaNueva _pila;
-    // public PilaNueva _pilaAux;
 
     [SerializeField] public GameObject Jaime1;
     [SerializeField] public GameObject Jaime2;
@@ -20,13 +13,11 @@ public class PilaNueva : MonoBehaviour, IPilaInterface
     [SerializeField] public GameObject[] trabajando;
     [SerializeField] public Transform[] standByPos;
     [SerializeField] public Transform[] trabajandoPos;
-    
-    
+
     [SerializeField] public GameObject Room;
     public int copiaIndex;
     public int copiaIndexAuxiliar;
-    
-    //Nueva implementacion interfaz
+
     public GameObject[] items = null;
     public GameObject[] itemsAux = null;
     public int index;
@@ -35,89 +26,114 @@ public class PilaNueva : MonoBehaviour, IPilaInterface
     public bool isActiveAux;
     public string name;
     public string nameAux;
-    
-    
+
     private void Awake()
     {
-        if (Instance != null) 
+        if (Instance != null)
         {
             Destroy(this);
             return;
         }
 
         DontDestroyOnLoad(this.gameObject);
-        Instance = this; 
+        Instance = this;
     }
+
     public void Start()
     {
-        
         isActive = true;
         isActiveAux = true;
-        
+
         index = 0;
         indexAux = 0;
-        items = InicializarPila(3,"-pila");
-        itemsAux = InicializarPila(3,"-pilaAux");
+        items = InicializarPila(3, "-pila");
+        itemsAux = InicializarPila(3, "-pilaAux");
         CargarPila();
     }
+
     private void Update()
     {
         copiaIndex = index;
         copiaIndexAuxiliar = indexAux;
     }
+
     public void pruebaPop()
     {
-        GameObject jaime = Pop();//se saca de pilaStandBy (3) y se manda a pilaWork(0)
-        trabajando[indexAux] = jaime; //simula la pila solo para observar
-        //index es 3-1 en pop por ende lo manda al array[2]
-        //jaime.transform.position = trabajandoPos[_pilaAux.index].position;
+        GameObject jaime = Pop();
+        if (jaime == null) return;
+
         PushAux(jaime);
+        RefreshAssistantPositions();
     }
+
     public void pruebaPush()
     {
-        GameObject jaime =PopAux(); //retorno de work(1) a standby(2)
-        Debug.Log("se intenta popear de working a standby"+jaime.name+" "+indexAux + nameAux);
-        //index siendo 2 se dejaria StandbyPosition[2].position
-        jaime.transform.position = standByPos[index].position;
-        trabajando[indexAux] = jaime; //simula la pila StandBy
+        GameObject jaime = PopAux();
+        if (jaime == null) return;
+
+        Debug.Log("se intenta popear de working a standby" + jaime.name + " " + indexAux + nameAux);
         Push(jaime);
+        RefreshAssistantPositions();
     }
+
     public void volverAlServicio(GameObject asistente)
     {
-        GameObject jaime =PopAux(); //retorno de work(1) a standby(2)
-        //index siendo 2 se dejaria StandbyPosition[2].position
-        jaime.transform.position = standByPos[index].position;
-        trabajando[indexAux] = asistente; //simula la pila StandBy
-        Debug.Log("se pusheo a "+jaime.name+" y se recibio como parametro:  "+asistente.name);
+        if (asistente == null) return;
+
+        RemoveFromAux(asistente);
+        if (Contains(items, index, asistente)) return;
+
+        Debug.Log("se pusheo a " + asistente.name + " y se recibio como parametro: " + asistente.name);
         Push(asistente);
+        RefreshAssistantPositions();
     }
+
     public GameObject servicioHabitacion()
     {
- 
-        GameObject jaime = Pop(); //se saca de pilaStandBy (3) y se manda a pilaWork(0)
-        //index es 3-1 en pop por ende lo manda al array[2]
-        //jaime.transform.position = trabajandoPos[_pilaAux.index].position;
-        trabajando[indexAux] = jaime; //simula la pila solo para observar
-        PushAux(jaime);
-        return jaime;
+        GameObject jaime = Pop();
+        if (jaime == null) return null;
 
-    }   
+        PushAux(jaime);
+        RefreshAssistantPositions();
+        return jaime;
+    }
+
     public void CargarPila()
     {
         Push(Jaime1);
         Push(Jaime2);
         Push(Jaime3);
         copiaIndex = index;
+        RefreshAssistantPositions();
     }
+
     public GameObject checkService()
     {
         return LastItem();
     }
+
+    public bool IsAvailable(GameObject assistant)
+    {
+        return Contains(items, index, assistant);
+    }
+
+    public bool StartService(GameObject assistant)
+    {
+        if (!RemoveFromAvailable(assistant))
+        {
+            return false;
+        }
+
+        PushAux(assistant);
+        RefreshAssistantPositions();
+        return true;
+    }
+
     public GameObject[] InicializarPila(int cantidad, string nombre)
     {
         return new GameObject[cantidad];
     }
-    
+
     public GameObject Pop()
     {
         if (index != 0)
@@ -125,111 +141,191 @@ public class PilaNueva : MonoBehaviour, IPilaInterface
             index--;
             GameObject popItem = items[index];
             items[index] = null;
-            Debug.Log("pop: " +popItem.name);
+            Debug.Log("pop: " + popItem.name);
             return popItem;
         }
-        else
-        {
-            throw new System.Exception("La pila no existe");
-        }
+
+        Debug.Log("La pila no existe");
+        return null;
     }
 
     public void Push(GameObject newItem)
     {
-         
+        if (newItem == null) return;
+        if (Contains(items, index, newItem)) return;
+
         if (isActive && index < items.Length)
         {
             items[index] = newItem;
             index++;
-            Debug.Log("se intenta pushear "+ newItem+" en index:"+index + " de pila "+name);
+            Debug.Log("se intenta pushear " + newItem + " en index:" + index + " de pila " + name);
         }
         else
         {
-            throw new System.Exception("error al pushear, esta llena o :"+isActive);
+            Debug.Log("error al pushear, esta llena o :" + isActive);
         }
     }
+
     public GameObject LastItem()
     {
-        if(index !=0)
+        if (index != 0)
         {
             return items[index - 1];
         }
-        else
-        {
-            return null;
-        }
+
+        return null;
     }
+
     public GameObject PopAux()
     {
-        if (indexAux != -1)
+        if (indexAux != 0)
         {
             indexAux--;
-            GameObject popItem = items[indexAux];
+            GameObject popItem = itemsAux[indexAux];
             itemsAux[indexAux] = null;
-            Debug.Log("pop: " +popItem.name);
+            Debug.Log("pop: " + popItem.name);
             return popItem;
         }
-        else
-        {
-            throw new System.Exception("La pila no existe");
-        }
+
+        Debug.Log("La pila no existe");
+        return null;
     }
 
     public void PushAux(GameObject newItem)
     {
-         
-        if (isActiveAux && indexAux < items.Length)
+        if (newItem == null) return;
+        if (Contains(itemsAux, indexAux, newItem)) return;
+
+        if (isActiveAux && indexAux < itemsAux.Length)
         {
-            items[indexAux] = newItem;
+            itemsAux[indexAux] = newItem;
             indexAux++;
-            Debug.Log("se intenta pushear "+ newItem+" en index:"+indexAux + " de pila "+nameAux);
+            Debug.Log("se intenta pushear " + newItem + " en index:" + indexAux + " de pila " + nameAux);
         }
         else
         {
-            throw new System.Exception("error al pushear, esta llena o :"+isActiveAux);
+            Debug.Log("error al pushear, esta llena o :" + isActiveAux);
         }
     }
 
     public GameObject LastItemAux()
     {
-        if(indexAux !=0)
+        if (indexAux != 0)
         {
-            return items[indexAux - 1];
+            return itemsAux[indexAux - 1];
         }
-        else
-        {
-            return null;
-        }
+
+        return null;
     }
-    
-    
+
     public void Clear()
     {
-        for(int i = 0; i < items.Length; i++)
+        for (int i = 0; i < items.Length; i++)
         {
             items[i] = null;
         }
+
+        for (int i = 0; i < itemsAux.Length; i++)
+        {
+            itemsAux[i] = null;
+        }
+
         index = 0;
+        indexAux = 0;
+        RefreshAssistantPositions();
     }
 
     public bool IsEmpty()
     {
-        if (isActive)
-        {
-            if (index == 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        else
+        if (!isActive)
         {
             throw new System.Exception("La pila no existe");
         }
+
+        return index == 0;
     }
-    
-    
+
+    private void RemoveFromAux(GameObject assistant)
+    {
+        for (int i = 0; i < indexAux; i++)
+        {
+            if (itemsAux[i] != assistant) continue;
+
+            for (int j = i + 1; j < indexAux; j++)
+            {
+                itemsAux[j - 1] = itemsAux[j];
+            }
+
+            indexAux--;
+            itemsAux[indexAux] = null;
+            return;
+        }
+    }
+
+    private bool RemoveFromAvailable(GameObject assistant)
+    {
+        for (int i = 0; i < index; i++)
+        {
+            if (items[i] != assistant) continue;
+
+            for (int j = i + 1; j < index; j++)
+            {
+                items[j - 1] = items[j];
+            }
+
+            index--;
+            items[index] = null;
+            return true;
+        }
+
+        return false;
+    }
+
+    private bool Contains(GameObject[] stack, int count, GameObject item)
+    {
+        if (stack == null || item == null) return false;
+
+        for (int i = 0; i < count; i++)
+        {
+            if (stack[i] == item)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private void RefreshAssistantPositions()
+    {
+        if (items == null || itemsAux == null) return;
+
+        for (int i = 0; i < index; i++)
+        {
+            if (items[i] != null && standByPos != null && i < standByPos.Length && standByPos[i] != null)
+            {
+                items[i].transform.position = standByPos[i].position;
+            }
+        }
+
+        for (int i = 0; i < indexAux; i++)
+        {
+            if (itemsAux[i] != null && trabajandoPos != null && i < trabajandoPos.Length && trabajandoPos[i] != null)
+            {
+                itemsAux[i].transform.position = trabajandoPos[i].position;
+            }
+
+            if (trabajando != null && i < trabajando.Length)
+            {
+                trabajando[i] = itemsAux[i];
+            }
+        }
+
+        if (trabajando == null) return;
+
+        for (int i = indexAux; i < trabajando.Length; i++)
+        {
+            trabajando[i] = null;
+        }
+    }
 }

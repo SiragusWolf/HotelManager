@@ -1,10 +1,7 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class MovDijkstra : MonoBehaviour, ISelectable
+public class MovDijkstra : MonoBehaviour
 {
     [SerializeField] private float speed;
 
@@ -16,13 +13,10 @@ public class MovDijkstra : MonoBehaviour, ISelectable
     private Vector3 proximoNodoPos;
     private SpriteRenderer _spriteRenderer;
 
-    //para testing, no necesario en el juego final
     private Vector3 posInicial;
-    
 
     private void Start()
     {
-        //proximoNodoPos = transform.position;
         posInicial = transform.position;
         _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
@@ -30,15 +24,10 @@ public class MovDijkstra : MonoBehaviour, ISelectable
     private void Update()
     {
         if (arrivedToDestination) return;
-        
-        float step =  speed * Time.deltaTime;
-        
-        //if (transform.position = )
-        
+
+        float step = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, proximoNodoPos, step);
 
-        
-        //chequeo para que desaparezca mientras sube las escaleras
         if (!Mathf.Approximately(proximoNodoPos.y, transform.position.y))
         {
             _spriteRenderer.enabled = false;
@@ -56,8 +45,6 @@ public class MovDijkstra : MonoBehaviour, ISelectable
         {
             _spriteRenderer.flipX = true;
         }
-        
-        
 
         if (proximoNodoPos != transform.position) return;
 
@@ -65,16 +52,18 @@ public class MovDijkstra : MonoBehaviour, ISelectable
         {
             arrivedToDestination = true;
             _spriteRenderer.enabled = false;
+            return;
         }
-        
-        if (proximoNodo() != null) proximoNodoPos = proximoNodo().transform.position;
+
+        GameObject siguienteNodo = proximoNodo();
+        if (siguienteNodo != null)
+        {
+            proximoNodoPos = siguienteNodo.transform.position;
+        }
     }
 
     public void Movimiento(Hotel hotelR, GameObject destino)
     {
-        //ResetPos para testing, no necesario en el juego final
-        //ResetPos();
-        
         pasos = hotelR.DevolverCamino(destino);
         pasosCumplidos = new List<bool>();
         arrivedToDestination = false;
@@ -82,18 +71,21 @@ public class MovDijkstra : MonoBehaviour, ISelectable
 
         foreach (var paso in pasos)
         {
-            bool pasoN = false;
-            pasosCumplidos.Add(pasoN);
+            pasosCumplidos.Add(false);
         }
-        
-        proximoNodoPos = proximoNodo().transform.position;
+
+        GameObject siguienteNodo = proximoNodo();
+        if (siguienteNodo != null)
+        {
+            proximoNodoPos = siguienteNodo.transform.position;
+        }
     }
 
     private GameObject proximoNodo()
     {
         GameObject nodo = null;
         Vector3 currentPos = transform.position;
-        
+
         for (int i = 0; i < pasosCumplidos.Count; i++)
         {
             if (currentPos == pasos[i].transform.position)
@@ -110,25 +102,13 @@ public class MovDijkstra : MonoBehaviour, ISelectable
                 return nodo;
             }
         }
-        
+
         return nodo;
     }
 
-    
-    //para testing, no necesario en el juego final
     private void ResetPos()
     {
-        //transform.position = posInicial;
-        //proximoNodoPos = posInicial;
-    }
-    
-    public void OnSelect()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public void OnDeselect()
-    {
-        throw new System.NotImplementedException();
+        transform.position = posInicial;
+        proximoNodoPos = posInicial;
     }
 }
